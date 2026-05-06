@@ -63,6 +63,16 @@ typedef struct {
     char output_format[16];
     char site_filter[128];
     bool nsfw;
+    char engine[32];
+    bool mod_tor;
+    bool mod_darkweb;
+    bool mod_scraper;
+    bool mod_email;
+    bool mod_phone;
+    bool mod_dns;
+    bool mod_whois;
+    bool mod_permute;
+    bool mod_intelligence;
 } LowHuntConfig;
 
 typedef struct {
