@@ -8,9 +8,5 @@
     "category":  "professional",
     "isNSFW":  false,
     "request_method":  "GET",
-    "regexCheck":  "",
-    "sources":  [
-                    "sherlock",
-                    "silinosic-x"
-                ]
+    "regexCheck":  ""
 }

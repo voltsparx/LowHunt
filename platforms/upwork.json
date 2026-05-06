@@ -8,8 +8,5 @@
     "category":  "professional",
     "isNSFW":  false,
     "request_method":  "GET",
-    "regexCheck":  "",
-    "sources":  [
-                    "silinosic-x"
-                ]
+    "regexCheck":  ""
 }

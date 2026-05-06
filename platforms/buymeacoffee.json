@@ -8,9 +8,5 @@
     "category":  "social",
     "isNSFW":  false,
     "request_method":  "GET",
-    "regexCheck":  "[a-zA-Z0-9]{3,15}",
-    "sources":  [
-                    "sherlock",
-                    "silinosic-x"
-                ]
+    "regexCheck":  "[a-zA-Z0-9]{3,15}"
 }

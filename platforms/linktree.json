@@ -8,9 +8,5 @@
     "category":  "social",
     "isNSFW":  false,
     "request_method":  "GET",
-    "regexCheck":  "^[\\w\\.]{2,30}$",
-    "sources":  [
-                    "sherlock",
-                    "silinosic-x"
-                ]
+    "regexCheck":  "^[\\w\\.]{2,30}$"
 }

@@ -8,8 +8,5 @@
     "category":  "social",
     "isNSFW":  false,
     "request_method":  "GET",
-    "regexCheck":  "^[a-zA-Z][a-zA-Z1-9_-]*$",
-    "sources":  [
-                    "sherlock"
-                ]
+    "regexCheck":  "^[a-zA-Z][a-zA-Z1-9_-]*$"
 }

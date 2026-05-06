@@ -8,9 +8,5 @@
     "category":  "video",
     "isNSFW":  false,
     "request_method":  "GET",
-    "regexCheck":  "^[A-Za-z0-9_-]{1,40}$",
-    "sources":  [
-                    "sherlock",
-                    "silinosic-x"
-                ]
+    "regexCheck":  "^[A-Za-z0-9_-]{1,40}$"
 }

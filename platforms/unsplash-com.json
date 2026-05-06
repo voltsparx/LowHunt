@@ -8,8 +8,5 @@
     "category":  "creative",
     "isNSFW":  false,
     "request_method":  "GET",
-    "regexCheck":  "",
-    "sources":  [
-                    "tookie-osint"
-                ]
+    "regexCheck":  ""
 }

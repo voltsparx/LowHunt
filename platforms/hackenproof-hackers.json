@@ -8,8 +8,5 @@
     "category":  "social",
     "isNSFW":  false,
     "request_method":  "GET",
-    "regexCheck":  "^[\\w-]{,34}$",
-    "sources":  [
-                    "sherlock"
-                ]
+    "regexCheck":  "^[\\w-]{,34}$"
 }

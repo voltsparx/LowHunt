@@ -8,9 +8,5 @@
     "category":  "creative",
     "isNSFW":  false,
     "request_method":  "GET",
-    "regexCheck":  "^[a-z0-9_]{1,60}$",
-    "sources":  [
-                    "sherlock",
-                    "silinosic-x"
-                ]
+    "regexCheck":  "^[a-z0-9_]{1,60}$"
 }

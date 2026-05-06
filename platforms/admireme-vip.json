@@ -8,9 +8,5 @@
     "category":  "social",
     "isNSFW":  true,
     "request_method":  "GET",
-    "regexCheck":  "",
-    "sources":  [
-                    "sherlock",
-                    "tookie-osint"
-                ]
+    "regexCheck":  ""
 }

@@ -8,8 +8,5 @@
     "category":  "social",
     "isNSFW":  false,
     "request_method":  "POST",
-    "regexCheck":  "",
-    "sources":  [
-                    "sherlock"
-                ]
+    "regexCheck":  ""
 }

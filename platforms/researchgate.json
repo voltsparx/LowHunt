@@ -8,8 +8,5 @@
     "category":  "social",
     "isNSFW":  false,
     "request_method":  "GET",
-    "regexCheck":  "\\w+_\\w+",
-    "sources":  [
-                    "sherlock"
-                ]
+    "regexCheck":  "\\w+_\\w+"
 }

@@ -8,10 +8,5 @@
     "category":  "social",
     "isNSFW":  false,
     "request_method":  "GET",
-    "regexCheck":  "",
-    "sources":  [
-                    "sherlock",
-                    "silinosic-x",
-                    "tookie-osint"
-                ]
+    "regexCheck":  ""
 }
