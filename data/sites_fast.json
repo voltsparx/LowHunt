@@ -1,0 +1,22 @@
+[
+  {"name":"GitHub","url":"https://github.com/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"coding","isNSFW":false},
+  {"name":"GitLab","url":"https://gitlab.com/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"coding","isNSFW":false},
+  {"name":"Reddit","url":"https://www.reddit.com/user/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"social","isNSFW":false},
+  {"name":"X","url":"https://x.com/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"social","isNSFW":false},
+  {"name":"Instagram","url":"https://www.instagram.com/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"social","isNSFW":false},
+  {"name":"TikTok","url":"https://www.tiktok.com/@{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"video","isNSFW":false},
+  {"name":"LinkedIn","url":"https://www.linkedin.com/in/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"professional","isNSFW":false},
+  {"name":"YouTube","url":"https://www.youtube.com/@{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"video","isNSFW":false},
+  {"name":"Twitch","url":"https://www.twitch.tv/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"gaming","isNSFW":false},
+  {"name":"Steam","url":"https://steamcommunity.com/id/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"gaming","isNSFW":false},
+  {"name":"Keybase","url":"https://keybase.io/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"crypto","isNSFW":false},
+  {"name":"HackerNews","url":"https://news.ycombinator.com/user?id={}","errorType":"message","errorCode":200,"errorMsg":"No such user.","errorUrl":"","category":"tech","isNSFW":false},
+  {"name":"Medium","url":"https://medium.com/@{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"writing","isNSFW":false},
+  {"name":"Pastebin","url":"https://pastebin.com/u/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"paste","isNSFW":false},
+  {"name":"DockerHub","url":"https://hub.docker.com/u/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"coding","isNSFW":false},
+  {"name":"PyPI","url":"https://pypi.org/user/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"coding","isNSFW":false},
+  {"name":"NPM","url":"https://www.npmjs.com/~{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"coding","isNSFW":false},
+  {"name":"Telegram","url":"https://t.me/{}","errorType":"message","errorCode":200,"errorMsg":"If you have Telegram, you can contact","errorUrl":"","category":"messaging","isNSFW":false},
+  {"name":"Mastodon","url":"https://mastodon.social/@{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"social","isNSFW":false},
+  {"name":"StackOverflow","url":"https://stackoverflow.com/users/{}","errorType":"status_code","errorCode":404,"errorMsg":"","errorUrl":"","category":"tech","isNSFW":false}
+]
