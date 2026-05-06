@@ -5,83 +5,45 @@
 #include <string.h>
 #include <strings.h>
 
+#include "banner.h"
 #include "colors.h"
 #include "config.h"
 #include "engine.h"
 #include "harvester.h"
+#include "help_menu.h"
 #include "http.h"
 #include "lowhunt.h"
+#include "metadata.h"
 #include "output.h"
+#include "resource_guard.h"
 #include "scanner.h"
 
-static void print_banner(bool no_color) {
-    const char* c = no_color ? "" : CYAN;
-    const char* d = no_color ? "" : DIM;
-    const char* r = no_color ? "" : RESET;
-
-    printf("%s", c);
-    printf("        _____  _  _  _ _     _ _     _ __   _ _______\n");
-    printf("|      |     | |  |  | |_____| |     | | \\  |    |\n");
-    printf("|_____ |_____| |__|__| |     | |_____| |  \\_|    |\n");
-    printf("%s", r);
-    printf("%s  v%s | Social Media & OSINT Recon | @%s | %s%s\n\n",
-           d, LOWHUNT_VERSION, LOWHUNT_AUTHOR, LOWHUNT_EMAIL, r);
-}
-
-static void print_usage(const char* prog) {
-    printf("Usage: %s [OPTIONS] <username> [username2 ...]\n\n", prog);
-    printf("Username scanning:\n");
-    printf("  -u, --username <name>     Target username. Can be repeated.\n");
-    printf("  -f, --fast                Use data/sites_fast.json.\n");
-    printf("  -s, --site <name>         Limit to one platform.\n");
-    printf("      --engine <name>       auto, threadpool, fusion, async, parallel,\n");
-    printf("                            stabilizer, sync, or intelligence.\n");
-    printf("      --intel               Print post-scan summary.\n");
-    printf("      --nsfw                Include NSFW platforms.\n");
-    printf("      --print-all           Print found and not-found results.\n\n");
-    printf("Domain harvesting:\n");
-    printf("  -d, --domain <domain>     Harvest public hostnames for domain.\n");
-    printf("  -b, --source <source>     Source: crtsh or all. Default: crtsh.\n");
-    printf("  -l, --limit <n>           Max harvest results. Default: 200.\n\n");
-    printf("Network:\n");
-    printf("      --tor                 Use socks5://127.0.0.1:9050.\n");
-    printf("      --proxy <url>         Custom libcurl proxy URL.\n");
-    printf("  -t, --timeout <ms>        Per-request timeout. Default: 10000.\n");
-    printf("  -T, --threads <n>         Concurrent requests. Default: 20, max: 50.\n\n");
-    printf("Output:\n");
-    printf("  -o, --output <file>       Write output file.\n");
-    printf("      --format <fmt>        txt, json, or csv. Default: txt.\n");
-    printf("      --no-color            Disable ANSI colors.\n");
-    printf("  -v, --verbose             Verbose output.\n\n");
-    printf("Info:\n");
-    printf("  -h, --help                Show help.\n");
-    printf("      --version             Print version.\n");
-    printf("      --list-sites          List supported platforms.\n");
-}
-
 static void add_target(LowHuntConfig* cfg, const char* username) {
-    if (cfg->target_count >= MAX_TARGETS) return;
+    if (!cfg || !username || cfg->target_count >= MAX_TARGETS) return;
     snprintf(cfg->targets[cfg->target_count++], sizeof(cfg->targets[0]), "%s", username);
 }
 
 int main(int argc, char** argv) {
+    const LowHuntMetadata* meta = lowhunt_metadata();
     LowHuntConfig cfg;
     ResultStore store;
     bool do_scan = false;
     bool do_harvest = false;
     bool list_sites = false;
+    bool show_about = false;
     char domain[256] = {0};
     char source[128] = "crtsh";
+    char explain_topic[64] = {0};
     int limit = 200;
     int opt;
     int idx = 0;
+    int verbosity = 0;
 
     static struct option long_opts[] = {
         {"username", required_argument, 0, 'u'},
         {"fast", no_argument, 0, 'f'},
         {"site", required_argument, 0, 's'},
         {"nsfw", no_argument, 0, 1},
-        {"print-all", no_argument, 0, 2},
         {"domain", required_argument, 0, 'd'},
         {"source", required_argument, 0, 'b'},
         {"limit", required_argument, 0, 'l'},
@@ -91,9 +53,10 @@ int main(int argc, char** argv) {
         {"threads", required_argument, 0, 'T'},
         {"output", required_argument, 0, 'o'},
         {"format", required_argument, 0, 5},
-        {"no-color", no_argument, 0, 6},
         {"engine", required_argument, 0, 9},
         {"intel", no_argument, 0, 10},
+        {"about", no_argument, 0, 11},
+        {"explain", required_argument, 0, 12},
         {"verbose", no_argument, 0, 'v'},
         {"help", no_argument, 0, 'h'},
         {"version", no_argument, 0, 7},
@@ -114,24 +77,34 @@ int main(int argc, char** argv) {
             case 'f': cfg.fast_scan = true; break;
             case 's': snprintf(cfg.site_filter, sizeof(cfg.site_filter), "%s", optarg); break;
             case 1: cfg.nsfw = true; break;
-            case 2: cfg.print_all = true; break;
             case 'd': snprintf(domain, sizeof(domain), "%s", optarg); do_harvest = true; break;
             case 'b': snprintf(source, sizeof(source), "%s", optarg); break;
             case 'l': limit = atoi(optarg); break;
-            case 3: snprintf(cfg.proxy, sizeof(cfg.proxy), "socks5://127.0.0.1:9050"); cfg.tor_enabled = true; break;
+            case 3:
+                snprintf(cfg.proxy, sizeof(cfg.proxy), "socks5://127.0.0.1:9050");
+                cfg.tor_enabled = true;
+                break;
             case 4: snprintf(cfg.proxy, sizeof(cfg.proxy), "%s", optarg); break;
             case 't': cfg.timeout_ms = atoi(optarg); break;
             case 'T': cfg.thread_count = atoi(optarg); break;
             case 'o': snprintf(cfg.output_file, sizeof(cfg.output_file), "%s", optarg); break;
             case 5: snprintf(cfg.output_format, sizeof(cfg.output_format), "%s", optarg); break;
-            case 6: cfg.no_color = true; break;
             case 9: snprintf(cfg.engine, sizeof(cfg.engine), "%s", optarg); break;
             case 10: cfg.mod_intelligence = true; break;
-            case 'v': cfg.verbose = true; break;
-            case 'h': print_banner(false); print_usage(argv[0]); return 0;
-            case 7: printf("lowhunt %s\n", LOWHUNT_VERSION); return 0;
+            case 11: show_about = true; break;
+            case 12: snprintf(explain_topic, sizeof(explain_topic), "%s", optarg); break;
+            case 'v': verbosity++; break;
+            case 'h':
+                banner_print();
+                help_menu_print(argv[0]);
+                return 0;
+            case 7:
+                printf("%s %s\n", meta->name, meta->version);
+                return 0;
             case 8: list_sites = true; break;
-            default: print_usage(argv[0]); return 1;
+            default:
+                help_menu_print(argv[0]);
+                return 1;
         }
     }
 
@@ -140,38 +113,61 @@ int main(int argc, char** argv) {
         do_scan = true;
     }
 
+    cfg.verbose = verbosity >= 1;
+    cfg.very_verbose = verbosity >= 2;
     if (cfg.thread_count < 1) cfg.thread_count = 1;
-    if (cfg.thread_count > MAX_THREADS) cfg.thread_count = MAX_THREADS;
     if (cfg.timeout_ms < 1000) cfg.timeout_ms = 1000;
 
-    print_banner(cfg.no_color);
-    http_global_init();
+    if (show_about) {
+        about_print();
+        return 0;
+    }
+    if (explain_topic[0]) {
+        banner_print();
+        if (!help_menu_print_topic(argv[0], explain_topic)) {
+            fprintf(stderr, "%s[ERROR]%s Unknown explain topic: %s\n", RED, RESET, explain_topic);
+            help_menu_print(argv[0]);
+            return 1;
+        }
+        return 0;
+    }
 
+    banner_print();
+
+    if (!do_scan && !do_harvest && !list_sites) {
+        help_menu_print(argv[0]);
+        return 0;
+    }
+
+    if (cfg.thread_count > 50 && do_scan) {
+        resource_guard_confirm_threads(cfg.thread_count);
+    }
+
+    http_global_init();
     cfg.sites = config_load_sites("platforms", &cfg.site_count);
+
     if (cfg.fast_scan && cfg.site_count > 50) cfg.site_count = 50;
     if ((do_scan || list_sites) && (!cfg.sites || cfg.site_count == 0)) {
-        fprintf(stderr, "%s[ERROR]%s Could not load site database.\n",
-                cfg.no_color ? "" : RED, cfg.no_color ? "" : RESET);
+        fprintf(stderr, "%s[ERROR]%s Could not load site database.\n", RED, RESET);
         http_global_cleanup();
         free(cfg.sites);
         return 1;
     }
 
     if (list_sites) {
-        output_list_sites(cfg.sites, cfg.site_count, cfg.no_color);
+        output_list_sites(cfg.sites, cfg.site_count);
     } else if (do_harvest) {
         harvester_run(domain, source, limit, &cfg);
     } else if (do_scan && cfg.target_count > 0) {
         pthread_mutex_init(&store.lock, NULL);
         scanner_run(&cfg, &store);
+        brief_report_process(&store, &cfg);
         if (cfg.mod_intelligence || strcasecmp(cfg.engine, "intelligence") == 0) {
-            intelligence_process(&store, cfg.no_color);
+            intelligence_process(&store);
         }
         output_results(&store, &cfg);
         pthread_mutex_destroy(&store.lock);
         free(store.results);
-    } else {
-        print_usage(argv[0]);
     }
 
     free(cfg.sites);

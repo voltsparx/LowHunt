@@ -1,0 +1,125 @@
+.TH LOWHUNT 1 "May 2026" "LowHunt v1.0" "User Commands"
+.SH NAME
+lowhunt \- fast public OSINT for authorized username and domain analysis
+.SH SYNOPSIS
+.B lowhunt
+[OPTIONS] <username> [username2 ...]
+.br
+.B lowhunt
+\-d DOMAIN [OPTIONS]
+.br
+.B lowhunt
+\-\-about
+.br
+.B lowhunt
+\-\-explain TOPIC
+.br
+.B man
+lowhunt
+.SH DESCRIPTION
+LowHunt is a native C reconnaissance tool for public-data-only OSINT on
+authorized targets. It checks username footprints across platform manifests,
+harvests passive hostnames for domains, and summarizes findings with multiple
+execution engines and investigator-friendly terminal output.
+.PP
+LowHunt does not bypass authentication or protections. Use it only on targets
+you own or have explicit written permission to assess.
+.SH OPTIONS
+.TP
+.B \-u, \-\-username NAME
+Add a username target.
+.TP
+.B \-d, \-\-domain DOMAIN
+Run passive domain hostname harvesting.
+.TP
+.B \-b, \-\-source SOURCE
+Select harvest source. Current values: crtsh, all.
+.TP
+.B \-l, \-\-limit N
+Limit harvested hostnames.
+.TP
+.B \-f, \-\-fast
+Trim the loaded platform set to the fast subset.
+.TP
+.B \-s, \-\-site NAME
+Limit username scanning to one platform.
+.TP
+.B \-\-engine NAME
+Choose execution engine: auto, threadpool, fusion, async, parallel, stabilizer, sync.
+.TP
+.B \-T, \-\-threads N
+Set the requested concurrency budget. Above 50 threads, LowHunt checks local resources and warns before continuing on constrained systems.
+.TP
+.B \-t, \-\-timeout MS
+Set the per-request timeout in milliseconds.
+.TP
+.B \-\-tor
+Route requests through socks5://127.0.0.1:9050.
+.TP
+.B \-\-proxy URL
+Use a custom proxy URL.
+.TP
+.B \-\-intel
+Print the intelligence summary after the scan.
+.TP
+.B \-v
+Enable verbose status output.
+.TP
+.B \-vv
+Enable full verbose structured output, including not-found, unknown, and error rows.
+.TP
+.B \-o, \-\-output FILE
+Write results to a file.
+.TP
+.B \-\-format FMT
+Select output format: txt, json, csv.
+.TP
+.B \-\-nsfw
+Include NSFW platforms.
+.TP
+.B \-\-list-sites
+Print the loaded platform catalog.
+.TP
+.B \-\-about
+Print the banner and project metadata.
+.TP
+.B \-\-explain TOPIC
+Explain a command or concept such as engine, fusion, harvest, or -vv.
+.TP
+.B \-\-version
+Print the current version.
+.TP
+.B \-h, \-\-help
+Show the help menu.
+.SH EXAMPLES
+.TP
+.B lowhunt alice \-\-engine fusion \-vv
+Fast structured scan of one username with high concurrency.
+.TP
+.B lowhunt \-u alice \-u bob \-\-threads 120 \-\-intel
+Multi-target scan with explicit concurrency and post-run summary.
+.TP
+.B lowhunt \-d example.com \-b crtsh \-o hosts.json \-\-format json
+Harvest public hostnames and save them as JSON.
+.TP
+.B lowhunt \-\-about
+Show the project overview and repository details.
+.TP
+.B lowhunt \-\-explain engine
+Explain engine selection and what each execution mode is good at.
+.SH INSTALLATION
+Managed local installers are provided under:
+.IP
+install/linux.sh
+.br
+install/macos.sh
+.br
+install/termux.sh
+.br
+install/windows.ps1
+.br
+install/windows.cmd
+.PP
+The installers place the application in a user-local directory, write a managed install manifest, create launchers, and add man page access for shell environments that support it.
+.SH SEE ALSO
+.BR crt.sh (1)

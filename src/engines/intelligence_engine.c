@@ -11,13 +11,10 @@ static void intelligence_run(Engine* self, HttpTask* tasks, int count,
                    cfg->proxy, cfg->thread_count);
 }
 
-void intelligence_process(const ResultStore* store, bool no_color) {
+void intelligence_process(const ResultStore* store) {
     int found = 0;
     int unknown = 0;
     int errors = 0;
-    const char* cyan = no_color ? "" : CYAN;
-    const char* yellow = no_color ? "" : YELLOW;
-    const char* reset = no_color ? "" : RESET;
 
     if (!store) return;
     for (int i = 0; i < store->count; i++) {
@@ -26,12 +23,12 @@ void intelligence_process(const ResultStore* store, bool no_color) {
         else if (store->results[i].status == RESULT_ERROR) errors++;
     }
 
-    printf("\n%s[intel]%s Findings summary\n", cyan, reset);
+    printf("\n%s[intel]%s Findings summary\n", CYAN, RESET);
     printf("  Found profiles : %d\n", found);
     printf("  Unknown checks : %d\n", unknown);
     printf("  Errors         : %d\n", errors);
     if (found >= 10) {
-        printf("%s  Signal         : broad public footprint%s\n", yellow, reset);
+        printf("%s  Signal         : broad public footprint%s\n", YELLOW, RESET);
     } else if (found > 0) {
         printf("  Signal         : limited public footprint\n");
     } else {

@@ -37,4 +37,5 @@ Engine* async_engine_create(void);
 Engine* fusion_engine_create(void);
 Engine* stabilizer_engine_create(void);
 Engine* intelligence_engine_create(void);
-void intelligence_process(const ResultStore* store, bool no_color);
+void intelligence_process(const ResultStore* store);
+void brief_report_process(const ResultStore* store, const LowHuntConfig* cfg);

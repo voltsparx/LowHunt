@@ -1,17 +1,13 @@
 #pragma once
 
 #include <stdbool.h>
-#include <stdint.h>
 #include <pthread.h>
+#include <stdint.h>
 
-#define LOWHUNT_VERSION     "1.0.0"
-#define LOWHUNT_AUTHOR      "voltsparx"
-#define LOWHUNT_EMAIL       "voltsparx@gmail.com"
-#define MAX_TARGETS         64
-#define MAX_SITES           2048
-#define MAX_THREADS         50
-#define DEFAULT_TIMEOUT_MS  10000
-#define DEFAULT_USER_AGENT  "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+#define MAX_TARGETS 64
+#define MAX_SITES 2048
+#define DEFAULT_TIMEOUT_MS 10000
+#define DEFAULT_USER_AGENT "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
 
 typedef enum {
     RESULT_FOUND = 0,
@@ -54,8 +50,7 @@ typedef struct {
     bool fast_scan;
     bool tor_enabled;
     bool verbose;
-    bool no_color;
-    bool print_all;
+    bool very_verbose;
     int timeout_ms;
     int thread_count;
     char proxy[256];
@@ -64,14 +59,6 @@ typedef struct {
     char site_filter[128];
     bool nsfw;
     char engine[32];
-    bool mod_tor;
-    bool mod_darkweb;
-    bool mod_scraper;
-    bool mod_email;
-    bool mod_phone;
-    bool mod_dns;
-    bool mod_whois;
-    bool mod_permute;
     bool mod_intelligence;
 } LowHuntConfig;
 

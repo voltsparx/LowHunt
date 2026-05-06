@@ -72,9 +72,7 @@ static void write_harvest_output(char** hosts, int count, const char* domain,
     if (!cfg || cfg->output_file[0] == '\0') return;
     f = fopen(cfg->output_file, "w");
     if (!f) {
-        fprintf(stderr, "%s[ERROR]%s Cannot open output file: %s\n",
-                cfg->no_color ? "" : RED, cfg->no_color ? "" : RESET,
-                cfg->output_file);
+        fprintf(stderr, "%s[ERROR]%s Cannot open output file: %s\n", RED, RESET, cfg->output_file);
         return;
     }
 
@@ -93,9 +91,7 @@ static void write_harvest_output(char** hosts, int count, const char* domain,
         for (int i = 0; i < count; i++) fprintf(f, "%s\n", hosts[i]);
     }
     fclose(f);
-    printf("\n%s[+]%s Harvest written to: %s\n",
-           cfg->no_color ? "" : GREEN, cfg->no_color ? "" : RESET,
-           cfg->output_file);
+    printf("\n%s[+]%s Harvest written to: %s\n", GREEN, RESET, cfg->output_file);
 }
 
 void harvester_run(const char* domain, const char* source, int limit,
@@ -109,8 +105,7 @@ void harvester_run(const char* domain, const char* source, int limit,
 
     if (!domain || !domain[0]) return;
     if (strcasecmp(selected, "crtsh") != 0 && strcasecmp(selected, "all") != 0) {
-        printf("%s[!]%s Source '%s' is not implemented yet; using crtsh.\n",
-               cfg->no_color ? "" : YELLOW, cfg->no_color ? "" : RESET, selected);
+        printf("%s[!]%s Source '%s' is not implemented yet; using crtsh.\n", YELLOW, RESET, selected);
     }
 
     snprintf(url, sizeof(url),
@@ -120,8 +115,7 @@ void harvester_run(const char* domain, const char* source, int limit,
     printf("Harvesting public certificate hostnames for %s via crt.sh...\n\n", domain);
     response = http_get(url, cfg->timeout_ms, DEFAULT_USER_AGENT, cfg->proxy);
     if (!response || !response->success) {
-        printf("%s[!]%s crt.sh request failed.\n",
-               cfg->no_color ? "" : RED, cfg->no_color ? "" : RESET);
+        printf("%s[!]%s crt.sh request failed.\n", RED, RESET);
         http_result_free(response);
         return;
     }
@@ -131,7 +125,7 @@ void harvester_run(const char* domain, const char* source, int limit,
     if (limit > 0 && display_count > limit) display_count = limit;
 
     for (int i = 0; i < display_count; i++) {
-        printf("%s[+]%s %s\n", cfg->no_color ? "" : GREEN, cfg->no_color ? "" : RESET, hosts[i]);
+        printf("%s[+]%s %s\n", GREEN, RESET, hosts[i]);
     }
     printf("\nTotal hosts: %d\n", display_count);
     write_harvest_output(hosts, display_count, domain, cfg);

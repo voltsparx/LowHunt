@@ -118,22 +118,20 @@ static void store_result(ResultStore* store, const ScanResult* result) {
 }
 
 static void print_scan_result(const ScanTaskData* data, const ScanResult* result) {
-    const char* reset = data->cfg->no_color ? "" : RESET;
     const char* color;
     if (!data || !result) return;
-    if (!data->cfg->print_all && result->status != RESULT_FOUND) return;
+    if (!data->cfg->very_verbose && result->status != RESULT_FOUND) return;
 
-    color = data->cfg->no_color ? "" :
-        (result->status == RESULT_FOUND ? GREEN :
-         result->status == RESULT_NOT_FOUND ? DIM :
-         result->status == RESULT_UNKNOWN ? YELLOW : RED);
+    color = result->status == RESULT_FOUND ? GREEN :
+        result->status == RESULT_NOT_FOUND ? DIM :
+        result->status == RESULT_UNKNOWN ? YELLOW : RED;
 
     printf("%s[%s]%s %-16s %-24s %s (HTTP %ld, %.0f ms)\n",
            color,
            result->status == RESULT_FOUND ? "+" :
            result->status == RESULT_NOT_FOUND ? "-" :
            result->status == RESULT_UNKNOWN ? "?" : "!",
-           reset,
+           RESET,
            result->username,
            result->site_name,
            result->url,
@@ -403,8 +401,7 @@ void scanner_run_with_engine(const LowHuntConfig* cfg, ResultStore* store,
         own_engine = true;
     }
     if (!engine || !engine->run) {
-        fprintf(stderr, "%s[WARN]%s Engine unavailable, falling back to threadpool.\n",
-                cfg->no_color ? "" : YELLOW, cfg->no_color ? "" : RESET);
+        fprintf(stderr, "%s[WARN]%s Engine unavailable, falling back to threadpool.\n", YELLOW, RESET);
         if (own_engine) engine_free(engine);
         engine = engine_create(ENGINE_THREADPOOL);
         own_engine = true;
@@ -440,14 +437,13 @@ void scanner_run_with_engine(const LowHuntConfig* cfg, ResultStore* store,
         if (fallback && fallback->run) {
             fprintf(stderr,
                     "%s[WARN]%s Engine '%s' did not finish cleanly. Recovering remaining tasks with '%s'.\n",
-                    cfg->no_color ? "" : YELLOW, cfg->no_color ? "" : RESET,
+                    YELLOW, RESET,
                     engine ? engine->name : engine_to_str(selected_type),
                     fallback->name);
             run_pending_tasks(fallback, tasks, completed, total, cfg);
         } else {
             fprintf(stderr,
-                    "%s[WARN]%s Could not create fallback engine. Remaining tasks were skipped.\n",
-                    cfg->no_color ? "" : YELLOW, cfg->no_color ? "" : RESET);
+                    "%s[WARN]%s Could not create fallback engine. Remaining tasks were skipped.\n", YELLOW, RESET);
         }
         engine_free(fallback);
     }

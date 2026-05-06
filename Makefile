@@ -1,11 +1,13 @@
 CC      ?= gcc
-CFLAGS  ?= -std=c11 -Wall -Wextra -O2 -Iinclude -pthread
+CFLAGS  ?= -std=c11 -Wall -Wextra -O2 -Isrc/include -pthread
 LDFLAGS ?= -lcurl -lpthread -lm
-SRCS    = src/main.c src/http.c src/scanner.c src/harvester.c src/output.c src/config.c src/utils.c \
-          src/engine_loader.c \
-          engines/parallel_engine.c engines/threadpool_engine.c engines/sync_engine.c \
-          engines/async_engine.c engines/fusion_engine.c engines/stabilizer_engine.c \
-          engines/intelligence_engine.c
+SRCS    = src/app/main.c src/config/config.c src/core/utils.c src/core/metadata.c src/core/resource_guard.c \
+          src/ui/banner.c src/ui/help_menu.c \
+          src/net/http.c src/net/scanner.c src/net/harvester.c \
+          src/output/output.c \
+          src/engines/engine_loader.c src/engines/parallel_engine.c src/engines/threadpool_engine.c \
+          src/engines/sync_engine.c src/engines/async_engine.c src/engines/fusion_engine.c \
+          src/engines/stabilizer_engine.c src/engines/intelligence_engine.c src/engines/brief_report_engine.c
 OBJ     = $(SRCS:.c=.o)
 TARGET  = lowhunt
 
@@ -23,9 +25,12 @@ install: $(TARGET)
 	cp -r data/* /usr/share/lowhunt/
 	mkdir -p /usr/share/lowhunt/platforms
 	cp -r platforms/* /usr/share/lowhunt/platforms/
+	mkdir -p /usr/share/man/man1
+	cp man/lowhunt.1 /usr/share/man/man1/
 
 uninstall:
 	rm -f /usr/local/bin/lowhunt
+	rm -f /usr/share/man/man1/lowhunt.1
 	rm -rf /usr/share/lowhunt
 
 clean:

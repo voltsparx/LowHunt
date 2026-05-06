@@ -112,7 +112,6 @@ void http_multi_run(HttpTask* tasks, int count,
 
     if (!tasks || count <= 0) return;
     if (max_parallel < 1) max_parallel = 1;
-    if (max_parallel > MAX_THREADS) max_parallel = MAX_THREADS;
 
     active = calloc((size_t)count, sizeof(ActiveTask));
     if (!active) return;
