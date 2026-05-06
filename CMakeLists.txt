@@ -17,6 +17,14 @@ set(SOURCES
     src/output.c
     src/config.c
     src/utils.c
+    src/engine_loader.c
+    engines/parallel_engine.c
+    engines/threadpool_engine.c
+    engines/sync_engine.c
+    engines/async_engine.c
+    engines/fusion_engine.c
+    engines/stabilizer_engine.c
+    engines/intelligence_engine.c
 )
 
 add_executable(lowhunt ${SOURCES})

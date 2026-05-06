@@ -3,9 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 
 #include "colors.h"
 #include "config.h"
+#include "engine.h"
 #include "harvester.h"
 #include "http.h"
 #include "lowhunt.h"
@@ -32,6 +34,9 @@ static void print_usage(const char* prog) {
     printf("  -u, --username <name>     Target username. Can be repeated.\n");
     printf("  -f, --fast                Use data/sites_fast.json.\n");
     printf("  -s, --site <name>         Limit to one platform.\n");
+    printf("      --engine <name>       auto, threadpool, fusion, async, parallel,\n");
+    printf("                            stabilizer, sync, or intelligence.\n");
+    printf("      --intel               Print post-scan summary.\n");
     printf("      --nsfw                Include NSFW platforms.\n");
     printf("      --print-all           Print found and not-found results.\n\n");
     printf("Domain harvesting:\n");
@@ -87,6 +92,8 @@ int main(int argc, char** argv) {
         {"output", required_argument, 0, 'o'},
         {"format", required_argument, 0, 5},
         {"no-color", no_argument, 0, 6},
+        {"engine", required_argument, 0, 9},
+        {"intel", no_argument, 0, 10},
         {"verbose", no_argument, 0, 'v'},
         {"help", no_argument, 0, 'h'},
         {"version", no_argument, 0, 7},
@@ -99,6 +106,7 @@ int main(int argc, char** argv) {
     cfg.timeout_ms = DEFAULT_TIMEOUT_MS;
     cfg.thread_count = 20;
     snprintf(cfg.output_format, sizeof(cfg.output_format), "txt");
+    snprintf(cfg.engine, sizeof(cfg.engine), "auto");
 
     while ((opt = getopt_long(argc, argv, "u:fs:d:b:l:t:T:o:vh", long_opts, &idx)) != -1) {
         switch (opt) {
@@ -117,6 +125,8 @@ int main(int argc, char** argv) {
             case 'o': snprintf(cfg.output_file, sizeof(cfg.output_file), "%s", optarg); break;
             case 5: snprintf(cfg.output_format, sizeof(cfg.output_format), "%s", optarg); break;
             case 6: cfg.no_color = true; break;
+            case 9: snprintf(cfg.engine, sizeof(cfg.engine), "%s", optarg); break;
+            case 10: cfg.mod_intelligence = true; break;
             case 'v': cfg.verbose = true; break;
             case 'h': print_banner(false); print_usage(argv[0]); return 0;
             case 7: printf("lowhunt %s\n", LOWHUNT_VERSION); return 0;
@@ -154,6 +164,9 @@ int main(int argc, char** argv) {
     } else if (do_scan && cfg.target_count > 0) {
         pthread_mutex_init(&store.lock, NULL);
         scanner_run(&cfg, &store);
+        if (cfg.mod_intelligence || strcasecmp(cfg.engine, "intelligence") == 0) {
+            intelligence_process(&store, cfg.no_color);
+        }
         output_results(&store, &cfg);
         pthread_mutex_destroy(&store.lock);
         free(store.results);

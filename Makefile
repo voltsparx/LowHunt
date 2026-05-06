@@ -1,7 +1,11 @@
 CC      ?= gcc
 CFLAGS  ?= -std=c11 -Wall -Wextra -O2 -Iinclude -pthread
 LDFLAGS ?= -lcurl -lpthread -lm
-SRCS    = src/main.c src/http.c src/scanner.c src/harvester.c src/output.c src/config.c src/utils.c
+SRCS    = src/main.c src/http.c src/scanner.c src/harvester.c src/output.c src/config.c src/utils.c \
+          src/engine_loader.c \
+          engines/parallel_engine.c engines/threadpool_engine.c engines/sync_engine.c \
+          engines/async_engine.c engines/fusion_engine.c engines/stabilizer_engine.c \
+          engines/intelligence_engine.c
 OBJ     = $(SRCS:.c=.o)
 TARGET  = lowhunt
 
