@@ -1,0 +1,15 @@
+﻿{
+    "name":  "BreachSta.rs Forum",
+    "url":  "https://breachsta.rs/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ctitle\u003eError - BreachStars\u003c/title\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

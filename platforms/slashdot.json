@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Slashdot",
+    "url":  "https://slashdot.org/~{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "user you requested does not exist",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

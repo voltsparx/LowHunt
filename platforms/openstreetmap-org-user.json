@@ -1,0 +1,15 @@
+﻿{
+    "name":  "openstreetmap.org-user",
+    "url":  "https://www.openstreetmap.org/user/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "does not exist",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

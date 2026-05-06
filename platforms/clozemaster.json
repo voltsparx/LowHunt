@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Clozemaster",
+    "url":  "https://www.clozemaster.com/players/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oh no! Player not found.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

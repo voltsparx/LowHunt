@@ -1,0 +1,16 @@
+﻿{
+    "name":  "LinkedIn",
+    "url":  "https://linkedin.com/in/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "professional",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z0-9]{3,100}$",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

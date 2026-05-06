@@ -1,0 +1,15 @@
+﻿{
+    "name":  "nationstates.net-nation=",
+    "url":  "https://nationstates.net/nation={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Nation Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

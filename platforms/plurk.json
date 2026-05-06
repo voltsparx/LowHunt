@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Plurk",
+    "url":  "https://www.plurk.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "User Not Found!",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

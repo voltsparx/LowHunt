@@ -1,0 +1,15 @@
+﻿{
+    "name":  "IRC-Galleria",
+    "url":  "https://irc-galleria.net/user/{}",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://irc-galleria.net/users/search?username={}",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

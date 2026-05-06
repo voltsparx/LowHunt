@@ -1,0 +1,15 @@
+﻿{
+    "name":  "forums.envato.com-u",
+    "url":  "https://forums.envato.com/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops! That page doesnâ€™t exist or is private.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

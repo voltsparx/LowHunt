@@ -1,0 +1,15 @@
+﻿{
+    "name":  "prog.hu",
+    "url":  "https://prog.hu/azonosito/info/{}",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://prog.hu/azonosito/info/{}",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Twitter",
+    "url":  "https://x.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003cdiv class=\"error-panel\"\u003e\u003cspan\u003eUser ",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z0-9_]{1,15}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

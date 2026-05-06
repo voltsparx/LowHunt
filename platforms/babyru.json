@@ -1,0 +1,15 @@
+﻿{
+    "name":  "BabyRu",
+    "url":  "https://www.baby.ru/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Страница, которую вы искали, не найдена",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

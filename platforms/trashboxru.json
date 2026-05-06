@@ -1,0 +1,15 @@
+﻿{
+    "name":  "TrashboxRU",
+    "url":  "https://trashbox.ru/users/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[A-Za-z0-9_-]{3,16}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

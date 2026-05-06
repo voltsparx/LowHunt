@@ -1,0 +1,15 @@
+﻿{
+    "name":  "redbubble.com-people",
+    "url":  "https://www.redbubble.com/people/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "404. Houston, we have a problem",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

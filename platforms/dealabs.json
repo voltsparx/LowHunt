@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Dealabs",
+    "url":  "https://www.dealabs.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "La page que vous essayez",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "[a-z0-9]{4,16}",
+    "sources":  [
+                    "sherlock"
+                ]
+}

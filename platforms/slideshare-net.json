@@ -1,0 +1,15 @@
+﻿{
+    "name":  "slideshare.net",
+    "url":  "https://slideshare.net/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This username",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

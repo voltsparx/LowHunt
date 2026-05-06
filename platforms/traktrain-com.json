@@ -1,0 +1,15 @@
+﻿{
+    "name":  "traktrain.com",
+    "url":  "https://traktrain.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Mistyped URL",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

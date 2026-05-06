@@ -1,0 +1,15 @@
+﻿{
+    "name":  "mydramalist.com-profile",
+    "url":  "https://www.mydramalist.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Don\u0027t have an account?",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

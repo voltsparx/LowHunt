@@ -1,0 +1,15 @@
+﻿{
+    "name":  "opennet",
+    "url":  "https://www.opennet.ru/~{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Имя участника не найдено",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[^-]*$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

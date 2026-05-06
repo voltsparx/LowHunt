@@ -1,0 +1,15 @@
+﻿{
+    "name":  "codesnippets.fandom.com-wiki",
+    "url":  "https://codesnippets.fandom.com/wiki/User:/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "There is currently no text in this page. ",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

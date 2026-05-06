@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Heavy-R",
+    "url":  "https://www.heavy-r.com/user/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Channel not found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

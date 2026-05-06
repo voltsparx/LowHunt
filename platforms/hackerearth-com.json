@@ -1,0 +1,15 @@
+﻿{
+    "name":  "hackerearth.com-@",
+    "url":  "https://hackerearth.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "404. URL not found.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

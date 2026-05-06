@@ -1,0 +1,15 @@
+﻿{
+    "name":  "tldrlegal.com-users",
+    "url":  "https://tldrlegal.com/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops... something went wrong.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

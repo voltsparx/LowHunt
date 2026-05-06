@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Terraria Forums",
+    "url":  "https://forums.terraria.org/index.php?search/42798315/\u0026c[users]={}\u0026o=relevance",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The following members could not be found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "YandexMusic",
+    "url":  "https://music.yandex/users/{}/playlists",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Ошибка 404",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

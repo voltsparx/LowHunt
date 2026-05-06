@@ -1,0 +1,15 @@
+﻿{
+    "name":  "forumophilia.com-profile.php",
+    "url":  "https://www.forumophilia.com/profile.php?mode=viewprofile\u0026u={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, but that user does not exist.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

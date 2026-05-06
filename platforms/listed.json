@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Listed",
+    "url":  "https://listed.to/@{}",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://listed.to/@{}",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

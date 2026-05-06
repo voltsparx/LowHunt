@@ -24,3 +24,4 @@ target_link_libraries(lowhunt CURL::libcurl pthread m)
 
 install(TARGETS lowhunt DESTINATION /usr/local/bin)
 install(DIRECTORY data/ DESTINATION /usr/share/lowhunt)
+install(DIRECTORY platforms/ DESTINATION /usr/share/lowhunt/platforms)

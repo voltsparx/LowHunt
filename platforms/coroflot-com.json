@@ -1,0 +1,15 @@
+﻿{
+    "name":  "coroflot.com",
+    "url":  "https://www.coroflot.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, the page you requested is no longer here, or you typed the wrong URL.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

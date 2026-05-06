@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Dev.to",
+    "url":  "https://dev.to/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "This page does not exist",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "silinosic-x",
+                    "tookie-osint"
+                ]
+}

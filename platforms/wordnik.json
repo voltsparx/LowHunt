@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Wordnik",
+    "url":  "https://www.wordnik.com/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z0-9_.+-]{1,40}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

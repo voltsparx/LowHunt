@@ -1,0 +1,15 @@
+﻿{
+    "name":  "youtube.com-@",
+    "url":  "https://www.youtube.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This page isn\u0027t available. Sorry about that.",
+    "errorUrl":  "",
+    "category":  "video",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

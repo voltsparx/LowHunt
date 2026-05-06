@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Wikipedia",
+    "url":  "https://en.wikipedia.org/wiki/Special:CentralAuth/{}?uselang=qqx",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "centralauth-admin-nonexistent:",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

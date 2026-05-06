@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Codechef",
+    "url":  "https://www.codechef.com/users/{}",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://www.codechef.com/",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

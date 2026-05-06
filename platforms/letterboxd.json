@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Letterboxd",
+    "url":  "https://letterboxd.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, we can’t find the page you’ve requested.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

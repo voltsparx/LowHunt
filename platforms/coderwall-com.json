@@ -1,0 +1,15 @@
+﻿{
+    "name":  "coderwall.com",
+    "url":  "https://coderwall.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "404! Our feels when that url is used",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

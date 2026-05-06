@@ -1,0 +1,15 @@
+﻿{
+    "name":  "HudsonRock",
+    "url":  "https://cavalier.hudsonrock.com/api/json/v2/osint-tools/search-by-username?username={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This username is not associated",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

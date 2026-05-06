@@ -1,0 +1,15 @@
+﻿{
+    "name":  "babyblogRU",
+    "url":  "https://www.babyblog.ru/user/{}",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://www.babyblog.ru/",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

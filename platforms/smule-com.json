@@ -1,0 +1,15 @@
+﻿{
+    "name":  "smule.com",
+    "url":  "https://www.smule.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Right tune, wrong note!",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

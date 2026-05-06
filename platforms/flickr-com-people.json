@@ -1,0 +1,15 @@
+﻿{
+    "name":  "flickr.com-people",
+    "url":  "https://www.flickr.com/people/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This is not the page youâ€™re looking for.",
+    "errorUrl":  "",
+    "category":  "creative",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

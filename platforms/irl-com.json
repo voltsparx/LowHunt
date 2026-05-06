@@ -1,0 +1,15 @@
+﻿{
+    "name":  "irl.com",
+    "url":  "https://www.irl.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "IRL has shut down",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

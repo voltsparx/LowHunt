@@ -1,0 +1,15 @@
+﻿{
+    "name":  "polarsteps.com",
+    "url":  "https://polarsteps.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "It seems like this user is not here (anymore).",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

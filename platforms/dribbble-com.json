@@ -1,0 +1,15 @@
+﻿{
+    "name":  "dribbble.com",
+    "url":  "https://dribbble.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Whoops, that page is gone.",
+    "errorUrl":  "",
+    "category":  "creative",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

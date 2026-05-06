@@ -1,0 +1,15 @@
+﻿{
+    "name":  "keybase.io",
+    "url":  "https://keybase.io/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, what you are looking for...it does not exist.",
+    "errorUrl":  "",
+    "category":  "crypto",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

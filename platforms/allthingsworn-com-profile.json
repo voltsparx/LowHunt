@@ -1,0 +1,15 @@
+﻿{
+    "name":  "allthingsworn.com-profile",
+    "url":  "https://www.allthingsworn.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This member has either changed their username or deleted their account.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "NationStates Region",
+    "url":  "https://nationstates.net/region={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "does not exist.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

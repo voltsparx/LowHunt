@@ -1,0 +1,15 @@
+﻿{
+    "name":  "ResearchGate",
+    "url":  "https://www.researchgate.net/profile/{}",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://www.researchgate.net/directory/profiles",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "\\w+_\\w+",
+    "sources":  [
+                    "sherlock"
+                ]
+}

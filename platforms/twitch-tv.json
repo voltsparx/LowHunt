@@ -1,0 +1,15 @@
+﻿{
+    "name":  "twitch.tv",
+    "url":  "https://www.twitch.tv/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry. Unless youâ€™ve got a time machine, that content is unavailable.",
+    "errorUrl":  "",
+    "category":  "video",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

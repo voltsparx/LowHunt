@@ -1,0 +1,15 @@
+﻿{
+    "name":  "DMOJ",
+    "url":  "https://dmoj.ca/user/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "No such user",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

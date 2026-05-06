@@ -1,0 +1,15 @@
+﻿{
+    "name":  "soundcloud.com",
+    "url":  "https://soundcloud.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "We canâ€™t find that user.",
+    "errorUrl":  "",
+    "category":  "music",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "BOOTH",
+    "url":  "https://{}.booth.pm/",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://booth.pm/",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[\\w@-]+?$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

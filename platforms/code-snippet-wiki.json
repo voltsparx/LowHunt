@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Code Snippet Wiki",
+    "url":  "https://codesnippets.fandom.com/wiki/User:{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This user has not filled out their profile page yet",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "LibraryThing",
+    "url":  "https://www.librarything.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003cp\u003eError: This user doesn\u0027t exist\u003c/p\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

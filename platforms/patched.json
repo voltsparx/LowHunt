@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Patched",
+    "url":  "https://patched.sh/User/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The member you specified is either invalid or doesn\u0027t exist.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

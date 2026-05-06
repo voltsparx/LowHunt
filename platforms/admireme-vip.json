@@ -1,0 +1,16 @@
+﻿{
+    "name":  "AdmireMe.Vip",
+    "url":  "https://admireme.vip/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "tookie-osint"
+                ]
+}

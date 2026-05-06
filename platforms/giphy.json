@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Giphy",
+    "url":  "https://giphy.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ctitle\u003e GIFs - Find \u0026amp; Share on GIPHY\u003c/title\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

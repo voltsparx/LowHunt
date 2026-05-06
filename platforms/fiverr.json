@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Fiverr",
+    "url":  "https://www.fiverr.com/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "professional",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "silinosic-x"
+                ]
+}

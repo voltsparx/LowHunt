@@ -1,0 +1,15 @@
+﻿{
+    "name":  "HotUKdeals",
+    "url":  "https://www.hotukdeals.com/profile/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

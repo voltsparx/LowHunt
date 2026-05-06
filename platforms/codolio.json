@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Codolio",
+    "url":  "https://codolio.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ctitle\u003ePage Not Found | Codolio\u003c/title\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z0-9_-]{3,30}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

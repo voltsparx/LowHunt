@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Velomania",
+    "url":  "https://forum.velomania.ru/member.php?username={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Пользователь не зарегистрирован и не имеет профиля для просмотра.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

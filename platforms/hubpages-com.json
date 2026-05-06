@@ -1,0 +1,15 @@
+﻿{
+    "name":  "hubpages.com-@",
+    "url":  "https://hubpages.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "404. Page does not exist",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

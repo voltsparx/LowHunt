@@ -1,0 +1,15 @@
+﻿{
+    "name":  "nationstates.net-region=",
+    "url":  "https://nationstates.net/region={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Region Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

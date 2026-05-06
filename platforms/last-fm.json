@@ -1,0 +1,16 @@
+﻿{
+    "name":  "last.fm",
+    "url":  "https://last.fm/user/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "music",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

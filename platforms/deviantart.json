@@ -1,0 +1,16 @@
+﻿{
+    "name":  "DeviantArt",
+    "url":  "https://www.deviantart.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Llama Not Found",
+    "errorUrl":  "",
+    "category":  "creative",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z][a-zA-Z0-9_-]*$",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

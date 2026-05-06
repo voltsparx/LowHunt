@@ -1,0 +1,15 @@
+﻿{
+    "name":  "steamcommunity.com-groups",
+    "url":  "https://steamcommunity.com/groups/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry!",
+    "errorUrl":  "",
+    "category":  "gaming",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

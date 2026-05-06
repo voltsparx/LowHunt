@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Rumble",
+    "url":  "https://rumble.com/user/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "video",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "RocketTube",
+    "url":  "https://www.rockettube.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "OOPS! Houston, we have a problem",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

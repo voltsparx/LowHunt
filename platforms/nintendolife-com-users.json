@@ -1,0 +1,15 @@
+﻿{
+    "name":  "nintendolife.com-users",
+    "url":  "https://www.nintendolife.com/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

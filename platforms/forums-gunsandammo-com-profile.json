@@ -1,0 +1,15 @@
+﻿{
+    "name":  "forums.gunsandammo.com-profile",
+    "url":  "https://forums.gunsandammo.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops... It looks like there was an error with that link.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

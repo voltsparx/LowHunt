@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Roblox",
+    "url":  "https://www.roblox.com/user.aspx?username={}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "gaming",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

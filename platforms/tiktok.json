@@ -1,0 +1,16 @@
+﻿{
+    "name":  "TikTok",
+    "url":  "https://www.tiktok.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\"statusCode\":10221",
+    "errorUrl":  "",
+    "category":  "video",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

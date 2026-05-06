@@ -1,0 +1,15 @@
+﻿{
+    "name":  "buymeacoff.ee",
+    "url":  "https://buymeacoff.ee/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The page youâ€™re looking for doesnâ€™t exist.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

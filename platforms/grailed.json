@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Grailed",
+    "url":  "https://www.grailed.com/{}",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://www.grailed.com/{}",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

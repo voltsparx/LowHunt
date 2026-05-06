@@ -1,0 +1,15 @@
+﻿{
+    "name":  "8tracks.com",
+    "url":  "https://8tracks.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This page has vanished, or perhaps it never even existed...",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

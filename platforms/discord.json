@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Discord",
+    "url":  "https://discord.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "{\"taken\":false}",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "POST",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

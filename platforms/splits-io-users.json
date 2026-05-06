@@ -1,0 +1,15 @@
+﻿{
+    "name":  "splits.io-users",
+    "url":  "https://splits.io/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This page doesn\u0027t exist.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

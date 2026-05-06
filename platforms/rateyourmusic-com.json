@@ -1,0 +1,15 @@
+﻿{
+    "name":  "rateyourmusic.com-~",
+    "url":  "https://rateyourmusic.com/~/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "ERROR 404: NOT FOUND",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

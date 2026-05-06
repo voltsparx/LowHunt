@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Telegram",
+    "url":  "https://t.me/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ctitle\u003eTelegram Messenger\u003c/title\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z0-9_]{3,32}[^_]$",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

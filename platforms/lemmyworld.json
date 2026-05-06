@@ -1,0 +1,15 @@
+﻿{
+    "name":  "LemmyWorld",
+    "url":  "https://lemmy.world/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ch1\u003eError!\u003c/h1\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

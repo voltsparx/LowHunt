@@ -1,0 +1,15 @@
+﻿{
+    "name":  "tenor.com-users",
+    "url":  "https://tenor.com/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "We could not find the page you were looking for.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

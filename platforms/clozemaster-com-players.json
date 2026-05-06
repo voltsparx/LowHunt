@@ -1,0 +1,15 @@
+﻿{
+    "name":  "clozemaster.com-players",
+    "url":  "https://www.clozemaster.com/players/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oh no! That page wasn\u0027t",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

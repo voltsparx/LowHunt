@@ -1,0 +1,15 @@
+﻿{
+    "name":  "codepen.io",
+    "url":  "https://codepen.io/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "I\u0027m afraid you\u0027ve found a page that doesn\u0027t exist on CodePen. That can happen when you follow a link to something that has since been deleted. Or the link was incorrect to begin with.",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

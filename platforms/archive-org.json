@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Archive.org",
+    "url":  "https://archive.org/details/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "could not fetch an account with user item identifier",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

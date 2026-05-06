@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Kik",
+    "url":  "https://kik.me/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The page you requested was not found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "tnaflix.com-profile",
+    "url":  "https://www.tnaflix.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Welcome to our most secret page",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

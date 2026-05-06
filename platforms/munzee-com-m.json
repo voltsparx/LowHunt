@@ -1,0 +1,15 @@
+﻿{
+    "name":  "munzee.com-m",
+    "url":  "https://www.munzee.com/m/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops, looks like the page is not found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

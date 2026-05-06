@@ -1,0 +1,16 @@
+﻿{
+    "name":  "IFTTT",
+    "url":  "https://www.ifttt.com/p/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[A-Za-z0-9]{3,35}$",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

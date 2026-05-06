@@ -1,0 +1,15 @@
+﻿{
+    "name":  "coinvote.cc-profile",
+    "url":  "https://coinvote.cc/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Error 503 Backend fetch failed",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

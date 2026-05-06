@@ -1,0 +1,15 @@
+﻿{
+    "name":  "n8n Community",
+    "url":  "https://community.n8n.io/u/{}/summary",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

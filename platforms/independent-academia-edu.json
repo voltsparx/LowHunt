@@ -1,0 +1,15 @@
+﻿{
+    "name":  "independent.academia.edu",
+    "url":  "https://independent.academia.edu/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops! It looks like you\u0027re in the wrong aisle",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

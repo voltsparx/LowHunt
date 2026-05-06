@@ -1,0 +1,15 @@
+﻿{
+    "name":  "genius.com-artists",
+    "url":  "https://genius.com/artists/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops! Page not found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

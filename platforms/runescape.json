@@ -1,0 +1,15 @@
+﻿{
+    "name":  "RuneScape",
+    "url":  "https://apps.runescape.com/runemetrics/app/overview/player/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "{\"error\":\"NO_PROFILE\",\"loggedIn\":\"false\"}",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^(?! )[\\w -]{1,12}(?\u003c! )$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

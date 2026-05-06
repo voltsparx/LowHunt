@@ -1,0 +1,15 @@
+﻿{
+    "name":  "PocketStars",
+    "url":  "https://pocketstars.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Join Your Favorite Adult Stars",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

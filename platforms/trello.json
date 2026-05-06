@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Trello",
+    "url":  "https://trello.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "model not found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

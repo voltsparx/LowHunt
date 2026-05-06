@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Tuna",
+    "url":  "https://tuna.voicemod.net/user/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-z0-9]{4,40}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

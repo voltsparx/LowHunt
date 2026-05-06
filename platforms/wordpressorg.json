@@ -1,0 +1,15 @@
+﻿{
+    "name":  "WordPressOrg",
+    "url":  "https://profiles.wordpress.org/{}/",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://wordpress.org",
+    "category":  "writing",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

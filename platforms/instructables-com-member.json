@@ -1,0 +1,15 @@
+﻿{
+    "name":  "instructables.com-member",
+    "url":  "https://www.instructables.com/member/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "404: We\u0027re sorry, things break sometimes",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

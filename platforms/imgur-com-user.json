@@ -1,0 +1,15 @@
+﻿{
+    "name":  "imgur.com-user",
+    "url":  "https://imgur.com/user/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "We searched high and low, but we couldnâ€™t find the page",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

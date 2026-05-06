@@ -1,0 +1,15 @@
+﻿{
+    "name":  "data.typeracer.com-pit",
+    "url":  "https://data.typeracer.com/pit/profile?user={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Profile Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

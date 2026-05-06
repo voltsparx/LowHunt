@@ -1,0 +1,16 @@
+﻿{
+    "name":  "HackerRank",
+    "url":  "https://hackerrank.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Something went wrong",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[^.]*?$",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

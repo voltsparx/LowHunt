@@ -1,0 +1,15 @@
+﻿{
+    "name":  "kongregate.com-accounts",
+    "url":  "https://www.kongregate.com/accounts/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, no account with that name was found.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

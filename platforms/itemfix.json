@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Itemfix",
+    "url":  "https://www.itemfix.com/c/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ctitle\u003eItemFix - Channel: \u003c/title\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

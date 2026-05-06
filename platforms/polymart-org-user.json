@@ -1,0 +1,15 @@
+﻿{
+    "name":  "polymart.org-user",
+    "url":  "https://polymart.org/user/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Looks like we couldn\u0027t find this user. Sorry!",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

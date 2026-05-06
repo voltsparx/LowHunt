@@ -1,0 +1,15 @@
+﻿{
+    "name":  "ourdjtalk.com-members",
+    "url":  "https://ourdjtalk.com/members?username={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The specified member cannot be found. Please enter a member\u0027s entire name.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

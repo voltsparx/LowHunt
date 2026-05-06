@@ -1,0 +1,15 @@
+﻿{
+    "name":  "APClips",
+    "url":  "https://apclips.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Amateur Porn Content Creators",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

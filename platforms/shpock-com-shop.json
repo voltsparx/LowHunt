@@ -1,0 +1,15 @@
+﻿{
+    "name":  "shpock.com-shop",
+    "url":  "https://www.shpock.com/shop/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "If you see this, something went wrong.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

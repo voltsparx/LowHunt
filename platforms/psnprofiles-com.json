@@ -1,0 +1,16 @@
+﻿{
+    "name":  "PSNProfiles.com",
+    "url":  "https://psnprofiles.com/{}",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://psnprofiles.com/?psnId={}",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "tookie-osint"
+                ]
+}

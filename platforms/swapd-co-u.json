@@ -1,0 +1,15 @@
+﻿{
+    "name":  "swapd.co-u",
+    "url":  "https://swapd.co/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops! That page doesnâ€™t exist :(",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

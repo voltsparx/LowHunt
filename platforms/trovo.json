@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Trovo",
+    "url":  "https://trovo.live/s/{}/",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Uh Ohhh...",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

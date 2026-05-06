@@ -1,0 +1,15 @@
+﻿{
+    "name":  "namuwiki",
+    "url":  "https://namu.wiki/w/%EC%82%AC%EC%9A%A9%EC%9E%90:{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Audiojungle",
+    "url":  "https://audiojungle.net/user/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z0-9_]+$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

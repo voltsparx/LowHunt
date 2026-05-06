@@ -1,0 +1,15 @@
+﻿{
+    "name":  "AniWorld",
+    "url":  "https://aniworld.to/user/profil/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Dieses Profil ist nicht verfügbar",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

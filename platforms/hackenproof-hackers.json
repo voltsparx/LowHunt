@@ -1,0 +1,15 @@
+﻿{
+    "name":  "HackenProof (Hackers)",
+    "url":  "https://hackenproof.com/hackers/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page not found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[\\w-]{,34}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

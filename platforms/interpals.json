@@ -1,0 +1,15 @@
+﻿{
+    "name":  "interpals",
+    "url":  "https://www.interpals.net/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The requested user does not exist or is inactive",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

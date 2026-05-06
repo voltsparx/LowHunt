@@ -1,0 +1,15 @@
+﻿{
+    "name":  "archive.org-details",
+    "url":  "https://archive.org/details/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "cannot find account",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

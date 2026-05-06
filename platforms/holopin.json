@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Holopin",
+    "url":  "https://holopin.io/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "true",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "POST",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

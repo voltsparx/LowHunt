@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Xing",
+    "url":  "https://www.xing.com/profile/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "professional",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "silinosic-x"
+                ]
+}

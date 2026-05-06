@@ -1,0 +1,15 @@
+﻿{
+    "name":  "snapchat.com-add",
+    "url":  "https://www.snapchat.com/add/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This content was not found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

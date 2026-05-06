@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Crowdin",
+    "url":  "https://crowdin.com/profile/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z0-9._-]{2,255}$",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

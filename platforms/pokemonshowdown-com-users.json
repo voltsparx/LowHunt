@@ -1,0 +1,15 @@
+﻿{
+    "name":  "pokemonshowdown.com-users",
+    "url":  "https://pokemonshowdown.com/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "(Unregistered)",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

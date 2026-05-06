@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Anilist",
+    "url":  "https://anilist.co/user/{}/",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "POST",
+    "regexCheck":  "^[A-Za-z0-9]{2,20}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

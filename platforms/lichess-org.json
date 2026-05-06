@@ -1,0 +1,15 @@
+﻿{
+    "name":  "lichess.org-@",
+    "url":  "https://lichess.org/@/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "PAGE NOT FOUND!",
+    "errorUrl":  "",
+    "category":  "gaming",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

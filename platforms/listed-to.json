@@ -1,0 +1,15 @@
+﻿{
+    "name":  "listed.to-@",
+    "url":  "https://listed.to/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The page you were looking for doesn\u0027t exist.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "archiveofourown.org-users",
+    "url":  "https://archiveofourown.org/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The page you tried was not found. You may have used an outdated link or may have typed the address (URL) incorrectly.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

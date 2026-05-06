@@ -1,0 +1,15 @@
+﻿{
+    "name":  "YouNow",
+    "url":  "https://www.younow.com/{}/",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "No users found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

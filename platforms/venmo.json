@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Venmo",
+    "url":  "https://account.venmo.com/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Venmo | Page Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

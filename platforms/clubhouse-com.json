@@ -1,0 +1,15 @@
+﻿{
+    "name":  "clubhouse.com-@",
+    "url":  "https://www.clubhouse.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry! We couldnâ€™t find what you were looking for",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

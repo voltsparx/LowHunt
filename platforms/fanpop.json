@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Fanpop",
+    "url":  "https://www.fanpop.com/fans/{}",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://www.fanpop.com/",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

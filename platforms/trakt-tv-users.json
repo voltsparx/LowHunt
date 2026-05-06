@@ -1,0 +1,15 @@
+﻿{
+    "name":  "trakt.tv-users",
+    "url":  "https://www.trakt.tv/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Come, my lord, you are a long way from home and winter is coming.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

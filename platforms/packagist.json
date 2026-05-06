@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Packagist",
+    "url":  "https://packagist.org/packages/{}/",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://packagist.org/search/?q={}\u0026reason=vendor_not_found",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

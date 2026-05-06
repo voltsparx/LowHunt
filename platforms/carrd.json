@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Carrd",
+    "url":  "https://{}.carrd.co/",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z0-9_-]{3,50}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "ultimate-guitar.com-u",
+    "url":  "https://ultimate-guitar.com/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops! We couldn\u0027t find that page.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

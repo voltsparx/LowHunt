@@ -1,0 +1,15 @@
+﻿{
+    "name":  "sketchfab.com",
+    "url":  "https://sketchfab.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Error 404",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

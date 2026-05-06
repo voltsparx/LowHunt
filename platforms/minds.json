@@ -1,0 +1,15 @@
+﻿{
+    "name":  "minds",
+    "url":  "https://www.minds.com/{}/",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\"valid\":true",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

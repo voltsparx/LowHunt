@@ -1,0 +1,15 @@
+﻿{
+    "name":  "lottiefiles.com",
+    "url":  "https://lottiefiles.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "We couldnâ€™t find the page youâ€™re looking for.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

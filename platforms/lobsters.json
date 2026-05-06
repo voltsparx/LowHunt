@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Lobsters",
+    "url":  "https://lobste.rs/u/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "[A-Za-z0-9][A-Za-z0-9_-]{0,24}",
+    "sources":  [
+                    "sherlock"
+                ]
+}

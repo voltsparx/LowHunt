@@ -1,0 +1,15 @@
+﻿{
+    "name":  "1337x",
+    "url":  "https://www.1337x.to/user/{}/",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ctitle\u003eError something went wrong.\u003c/title\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[A-Za-z0-9]{4,12}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

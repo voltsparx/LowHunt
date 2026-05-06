@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Kongregate",
+    "url":  "https://www.kongregate.com/accounts/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z][a-zA-Z0-9_-]*$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

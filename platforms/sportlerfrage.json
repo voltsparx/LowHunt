@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Sportlerfrage",
+    "url":  "https://www.sportlerfrage.net/nutzer/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

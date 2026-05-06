@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Carbonmade",
+    "url":  "https://{}.carbonmade.com",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://carbonmade.com/fourohfour?domain={}.carbonmade.com",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[\\w@-]+?$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

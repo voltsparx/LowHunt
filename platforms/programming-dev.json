@@ -1,0 +1,15 @@
+﻿{
+    "name":  "programming.dev",
+    "url":  "https://programming.dev/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Error!",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

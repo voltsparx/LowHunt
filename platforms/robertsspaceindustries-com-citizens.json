@@ -1,0 +1,15 @@
+﻿{
+    "name":  "robertsspaceindustries.com-citizens",
+    "url":  "https://robertsspaceindustries.com/citizens/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "NAVIGATING UNCHARTED TERRITORY",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

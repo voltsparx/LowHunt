@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Steam Community (User)",
+    "url":  "https://steamcommunity.com/id/{}/",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The specified profile could not be found",
+    "errorUrl":  "",
+    "category":  "gaming",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

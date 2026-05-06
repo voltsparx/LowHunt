@@ -1,0 +1,15 @@
+﻿{
+    "name":  "slides.com",
+    "url":  "https://slides.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "We couldn\u0027t find what you\u0027re looking for",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Bazar.cz",
+    "url":  "https://www.bazar.cz/{}/",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://www.bazar.cz/error404.aspx",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

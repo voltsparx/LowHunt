@@ -1,0 +1,15 @@
+﻿{
+    "name":  "behance.net",
+    "url":  "https://www.behance.net/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops! We canâ€™t find that page.",
+    "errorUrl":  "",
+    "category":  "creative",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

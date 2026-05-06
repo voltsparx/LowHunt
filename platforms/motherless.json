@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Motherless",
+    "url":  "https://motherless.com/m/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "no longer a member",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "tryhackme.com-p",
+    "url":  "https://tryhackme.com/p/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Nothing to see here",
+    "errorUrl":  "",
+    "category":  "gaming",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Hive Blog",
+    "url":  "https://hive.blog/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ctitle\u003eUser Not Found - Hive\u003c/title\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

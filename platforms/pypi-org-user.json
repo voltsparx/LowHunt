@@ -1,0 +1,15 @@
+﻿{
+    "name":  "pypi.org-user",
+    "url":  "https://pypi.org/user/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "We looked everywhere but couldn\u0027t find this page",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Smule",
+    "url":  "https://www.smule.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Smule | Page Not Found (404)",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,16 @@
+﻿{
+    "name":  "GitHub",
+    "url":  "https://www.github.com/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z0-9](?:[a-zA-Z0-9]|-(?=[a-zA-Z0-9])){0,38}$",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

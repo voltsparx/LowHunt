@@ -1,0 +1,15 @@
+﻿{
+    "name":  "themeforest.net-user",
+    "url":  "https://themeforest.net/user/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "404 - Nothing to see here",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

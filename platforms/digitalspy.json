@@ -1,0 +1,15 @@
+﻿{
+    "name":  "DigitalSpy",
+    "url":  "https://forums.digitalspy.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The page you were looking for could not be found.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^\\w{3,20}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

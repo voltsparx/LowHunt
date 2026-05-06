@@ -1,0 +1,15 @@
+﻿{
+    "name":  "hackerrank.com",
+    "url":  "https://hackerrank.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "We could not find the page you were looking for, so we found something to make you laugh to make up for it.",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

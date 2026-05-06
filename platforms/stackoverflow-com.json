@@ -1,0 +1,15 @@
+﻿{
+    "name":  "stackoverflow.com",
+    "url":  "https://www.stackoverflow.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "We\u0027re sorry, we couldn\u0027t find the page you requested.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

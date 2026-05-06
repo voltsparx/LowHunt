@@ -1,0 +1,15 @@
+﻿{
+    "name":  "imagefap.com-profile",
+    "url":  "https://www.imagefap.com/profile/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

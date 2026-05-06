@@ -1,0 +1,15 @@
+﻿{
+    "name":  "opensource.com-users",
+    "url":  "https://opensource.com/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page not found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

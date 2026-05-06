@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Odysee",
+    "url":  "https://odysee.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003clink rel=\"canonical\" content=\"odysee.com\"/\u003e",
+    "errorUrl":  "",
+    "category":  "video",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

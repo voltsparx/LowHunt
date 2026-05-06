@@ -1,0 +1,15 @@
+﻿{
+    "name":  "omg.lol",
+    "url":  "https://{}.omg.lol",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\"available\": true",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

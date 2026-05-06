@@ -1,0 +1,15 @@
+﻿{
+    "name":  "open.spotify.com-user",
+    "url":  "https://open.spotify.com/user/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page not found",
+    "errorUrl":  "",
+    "category":  "music",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

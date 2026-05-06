@@ -1,0 +1,15 @@
+﻿{
+    "name":  "NationStates Nation",
+    "url":  "https://nationstates.net/nation={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Was this your nation? It may have ceased to exist due to inactivity, but can rise again!",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

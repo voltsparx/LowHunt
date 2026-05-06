@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Cults3D",
+    "url":  "https://cults3d.com/en/users/{}/creations",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oh dear, this page is not working!",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

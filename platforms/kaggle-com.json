@@ -1,0 +1,15 @@
+﻿{
+    "name":  "kaggle.com",
+    "url":  "https://www.kaggle.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "We can\u0027t find that page.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

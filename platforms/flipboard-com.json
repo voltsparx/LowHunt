@@ -1,0 +1,15 @@
+﻿{
+    "name":  "flipboard.com-@",
+    "url":  "https://flipboard.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "THIS PAGE DOES NOT EXIST",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

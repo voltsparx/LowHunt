@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Minecraft",
+    "url":  "https://api.mojang.com/users/profiles/minecraft/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Couldn\u0027t find any profile with name",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^.{1,25}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "ifttt.com-p",
+    "url":  "https://www.ifttt.com/p/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The requested page or file does not exist",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

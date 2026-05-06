@@ -1,0 +1,15 @@
+﻿{
+    "name":  "codecademy.com-profiles",
+    "url":  "https://www.codecademy.com/profiles/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This profile could not be found",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "vsco.co",
+    "url":  "https://vsco.co/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Gone astray?",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

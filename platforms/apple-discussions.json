@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Apple Discussions",
+    "url":  "https://discussions.apple.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Looking for something in Apple Support Communities?",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "codechef.com-users",
+    "url":  "https://www.codechef.com/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Error Occured! Page could not be found",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

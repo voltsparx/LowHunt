@@ -1,0 +1,15 @@
+﻿{
+    "name":  "forum_guns",
+    "url":  "https://forum.guns.ru/forummisc/blog/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "action=https://forum.guns.ru/forummisc/blog/search",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

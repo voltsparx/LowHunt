@@ -1,0 +1,15 @@
+﻿{
+    "name":  "api.mojang.com-users",
+    "url":  "https://api.mojang.com/users/profiles/minecraft/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

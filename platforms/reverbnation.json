@@ -1,0 +1,15 @@
+﻿{
+    "name":  "ReverbNation",
+    "url":  "https://www.reverbnation.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, we couldn\u0027t find that page",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

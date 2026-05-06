@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Signal",
+    "url":  "https://community.signalusers.org/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops! That page doesn’t exist or is private.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "community.eintracht.de-fans",
+    "url":  "https://community.eintracht.de/fans/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Seite nicht gefunden",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

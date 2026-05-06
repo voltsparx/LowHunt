@@ -1,0 +1,15 @@
+﻿{
+    "name":  "9gag.com-u",
+    "url":  "https://www.9gag.com/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "There\u0027s nothing here.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

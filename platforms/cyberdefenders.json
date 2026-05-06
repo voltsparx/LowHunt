@@ -1,0 +1,16 @@
+﻿{
+    "name":  "CyberDefenders",
+    "url":  "https://cyberdefenders.org/p/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[^\\/:*?\"\u003c\u003e|@]{3,50}$",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

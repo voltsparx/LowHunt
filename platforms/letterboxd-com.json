@@ -1,0 +1,15 @@
+﻿{
+    "name":  "letterboxd.com",
+    "url":  "https://letterboxd.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, we canâ€™t find the page youâ€™ve requested.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

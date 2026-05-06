@@ -1,0 +1,15 @@
+﻿{
+    "name":  "colourlovers.com-lover",
+    "url":  "https://www.colourlovers.com/lover/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "No one\u0027s home",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

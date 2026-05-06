@@ -1,0 +1,15 @@
+﻿{
+    "name":  "forums.mmorpg.com-profile",
+    "url":  "https://forums.mmorpg.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "404 Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

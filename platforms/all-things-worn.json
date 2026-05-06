@@ -1,0 +1,15 @@
+﻿{
+    "name":  "All Things Worn",
+    "url":  "https://www.allthingsworn.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sell Used Panties",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

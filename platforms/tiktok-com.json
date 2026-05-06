@@ -1,0 +1,15 @@
+﻿{
+    "name":  "tiktok.com-@",
+    "url":  "https://tiktok.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Couldn\u0027t find this account",
+    "errorUrl":  "",
+    "category":  "video",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

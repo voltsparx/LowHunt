@@ -1,0 +1,15 @@
+﻿{
+    "name":  "bandcamp.com",
+    "url":  "https://www.bandcamp.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, that something isnâ€™t here.",
+    "errorUrl":  "",
+    "category":  "music",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

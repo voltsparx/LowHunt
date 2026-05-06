@@ -1,0 +1,15 @@
+﻿{
+    "name":  "GaiaOnline",
+    "url":  "https://www.gaiaonline.com/profiles/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "No user ID specified or user does not exist",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

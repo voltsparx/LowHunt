@@ -1,0 +1,15 @@
+﻿{
+    "name":  "sportlerfrage.net-nutzer",
+    "url":  "https://www.sportlerfrage.net/nutzer/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Hoppla!",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

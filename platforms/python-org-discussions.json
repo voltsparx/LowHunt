@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Python.org Discussions",
+    "url":  "https://discuss.python.org/u/{}/summary",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops! That page doesnâ€™t exist or is private.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

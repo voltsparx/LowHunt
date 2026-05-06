@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Chatujme.cz",
+    "url":  "https://profil.chatujme.cz/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Neexistujicí profil",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z][a-zA-Z1-9_-]*$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

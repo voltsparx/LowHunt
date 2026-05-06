@@ -1,0 +1,16 @@
+﻿{
+    "name":  "HackerOne",
+    "url":  "https://hackerone.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page not found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

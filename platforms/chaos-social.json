@@ -1,0 +1,16 @@
+﻿{
+    "name":  "chaos.social",
+    "url":  "https://chaos.social/@{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "The page you are looking for isn\u0027t here.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "tookie-osint"
+                ]
+}

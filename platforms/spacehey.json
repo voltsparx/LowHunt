@@ -1,0 +1,15 @@
+﻿{
+    "name":  "SpaceHey",
+    "url":  "https://spacehey.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Not Found (Error 404) | SpaceHey",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

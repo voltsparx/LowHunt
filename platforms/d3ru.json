@@ -1,0 +1,15 @@
+﻿{
+    "name":  "d3RU",
+    "url":  "https://d3.ru/user/{}/posts",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

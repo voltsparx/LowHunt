@@ -1,0 +1,15 @@
+﻿{
+    "name":  "bitcoinforum.com-profile",
+    "url":  "https://bitcoinforum.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The user whose profile you are trying to view does not exist.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

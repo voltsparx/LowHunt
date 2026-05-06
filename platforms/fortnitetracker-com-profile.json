@@ -1,0 +1,15 @@
+﻿{
+    "name":  "fortnitetracker.com-profile",
+    "url":  "https://fortnitetracker.com/profile/all/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "404 Not Found. We are unable to find your profile",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

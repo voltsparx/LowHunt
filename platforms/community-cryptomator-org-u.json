@@ -1,0 +1,15 @@
+﻿{
+    "name":  "community.cryptomator.org-u",
+    "url":  "https://community.cryptomator.org/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops! That page doesnâ€™t exist or is private.",
+    "errorUrl":  "",
+    "category":  "crypto",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "github.com",
+    "url":  "https://www.github.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Find code, projects, and people on GitHub",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "forum.3dnews.ru-member.php",
+    "url":  "https://forum.3dnews.ru/member.php?username={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Your connection isn\u0027t private",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

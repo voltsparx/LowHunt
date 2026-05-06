@@ -1,0 +1,15 @@
+﻿{
+    "name":  "unsplash.com-@",
+    "url":  "https://unsplash.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page Not Found",
+    "errorUrl":  "",
+    "category":  "creative",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

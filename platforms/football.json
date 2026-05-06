@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Football",
+    "url":  "https://www.rusfootball.info/user/{}/",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Пользователь с таким именем не найден",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

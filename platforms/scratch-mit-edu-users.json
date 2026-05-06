@@ -1,0 +1,15 @@
+﻿{
+    "name":  "scratch.mit.edu-users",
+    "url":  "https://scratch.mit.edu/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Whoops! Our server is Scratch\u0027ing its head",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

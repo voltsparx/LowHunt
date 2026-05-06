@@ -1,0 +1,15 @@
+﻿{
+    "name":  "tryhackme.com-api",
+    "url":  "https://tryhackme.com/api/user/exist/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "false",
+    "errorUrl":  "",
+    "category":  "gaming",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

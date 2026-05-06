@@ -1,0 +1,15 @@
+﻿{
+    "name":  "facebook.com",
+    "url":  "https://www.facebook.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This content isn\u0027t available right now",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

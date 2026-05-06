@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Cracked",
+    "url":  "https://www.cracked.com/members/{}/",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://www.cracked.com/",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

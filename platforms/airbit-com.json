@@ -1,0 +1,15 @@
+﻿{
+    "name":  "airbit.com",
+    "url":  "https://airbit.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "User not found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

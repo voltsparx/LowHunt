@@ -1,0 +1,15 @@
+﻿{
+    "name":  "clapperapp.com",
+    "url":  "https://clapperapp.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Couldn\u0027t find this account",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

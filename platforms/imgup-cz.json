@@ -1,0 +1,16 @@
+﻿{
+    "name":  "ImgUp.cz",
+    "url":  "https://imgup.cz/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "Oops! That page canâ€™t be found.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Pastebin",
+    "url":  "https://pastebin.com/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Not Found (#404)",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

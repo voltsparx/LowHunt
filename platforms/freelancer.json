@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Freelancer",
+    "url":  "https://www.freelancer.com/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\"users\":{}",
+    "errorUrl":  "",
+    "category":  "professional",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

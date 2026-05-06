@@ -1,0 +1,16 @@
+﻿{
+    "name":  "BuyMeACoffee",
+    "url":  "https://buymeacoff.ee/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "[a-zA-Z0-9]{3,15}",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

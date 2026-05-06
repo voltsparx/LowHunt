@@ -1,0 +1,15 @@
+﻿{
+    "name":  "freelance.habr.com-freelancers",
+    "url":  "https://freelance.habr.com/freelancers/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "professional",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

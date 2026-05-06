@@ -1,0 +1,15 @@
+﻿{
+    "name":  "goodreads.com",
+    "url":  "https://www.goodreads.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page-Is-Gone",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

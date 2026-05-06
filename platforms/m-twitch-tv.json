@@ -1,0 +1,15 @@
+﻿{
+    "name":  "m.twitch.tv",
+    "url":  "https://m.twitch.tv/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, that page is in another castle!",
+    "errorUrl":  "",
+    "category":  "video",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "CryptoHack",
+    "url":  "https://cryptohack.org/user/{}/",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://cryptohack.org/",
+    "category":  "crypto",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "biggerpockets.com-users",
+    "url":  "https://www.biggerpockets.com/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "It looks like the page you were looking for doesn\u0027t actually exist",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

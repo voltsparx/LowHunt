@@ -1,0 +1,15 @@
+﻿{
+    "name":  "NitroType",
+    "url":  "https://www.nitrotype.com/racer/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ctitle\u003eNitro Type | Competitive Typing Game | Race Your Friends\u003c/title\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

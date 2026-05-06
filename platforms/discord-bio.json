@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Discord.bio",
+    "url":  "https://discords.com/api-v2/bio/details/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ctitle\u003eServer Error (500)\u003c/title\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

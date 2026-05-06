@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Intigriti",
+    "url":  "https://app.intigriti.com/profile/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "[a-z0-9_]{1,25}",
+    "sources":  [
+                    "sherlock"
+                ]
+}

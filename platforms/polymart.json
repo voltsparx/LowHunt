@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Polymart",
+    "url":  "https://polymart.org/user/{}",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://polymart.org/user/-1",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

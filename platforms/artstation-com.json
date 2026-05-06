@@ -1,0 +1,15 @@
+﻿{
+    "name":  "artstation.com",
+    "url":  "https://www.artstation.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page not found",
+    "errorUrl":  "",
+    "category":  "creative",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "my.flightradar24.com",
+    "url":  "https://my.flightradar24.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, this page could not be found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

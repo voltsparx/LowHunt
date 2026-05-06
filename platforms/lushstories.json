@@ -1,0 +1,15 @@
+﻿{
+    "name":  "LushStories",
+    "url":  "https://www.lushstories.com/profile/{}",
+    "errorType":  "response_url",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "https://www.lushstories.com/login",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

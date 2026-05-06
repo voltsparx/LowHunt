@@ -1,0 +1,15 @@
+﻿{
+    "name":  "forum.hackthebox.eu-profile",
+    "url":  "https://forum.hackthebox.eu/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops! That page doesnâ€™t exist or is private.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

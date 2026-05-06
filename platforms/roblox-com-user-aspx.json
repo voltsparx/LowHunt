@@ -1,0 +1,15 @@
+﻿{
+    "name":  "roblox.com-user.aspx",
+    "url":  "https://www.roblox.com/user.aspx?username={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page cannot be found or no longer exists",
+    "errorUrl":  "",
+    "category":  "gaming",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

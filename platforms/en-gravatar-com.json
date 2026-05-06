@@ -1,0 +1,15 @@
+﻿{
+    "name":  "en.gravatar.com",
+    "url":  "http://en.gravatar.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Uh oh. Page not found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

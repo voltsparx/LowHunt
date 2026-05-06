@@ -1,0 +1,16 @@
+﻿{
+    "name":  "TryHackMe",
+    "url":  "https://tryhackme.com/p/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "{\"success\":false}",
+    "errorUrl":  "",
+    "category":  "gaming",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[a-zA-Z0-9.]{1,16}$",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

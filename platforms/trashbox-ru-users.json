@@ -1,0 +1,15 @@
+﻿{
+    "name":  "trashbox.ru-users",
+    "url":  "https://trashbox.ru/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "404 â€” NOT FOUND",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "myminifactory.com-users",
+    "url":  "https://www.myminifactory.com/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Something has gone wrong or you have entered an incorrect link",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

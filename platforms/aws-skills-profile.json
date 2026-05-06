@@ -1,0 +1,15 @@
+﻿{
+    "name":  "AWS Skills Profile",
+    "url":  "https://skillsprofile.skillbuilder.aws/user/{}/",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "shareProfileAccepted\":false",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

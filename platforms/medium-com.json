@@ -1,0 +1,15 @@
+﻿{
+    "name":  "medium.com-@",
+    "url":  "https://medium.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Out of nothing, something.",
+    "errorUrl":  "",
+    "category":  "writing",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -137,8 +137,8 @@ int main(int argc, char** argv) {
     print_banner(cfg.no_color);
     http_global_init();
 
-    cfg.sites = config_load_sites(cfg.fast_scan ? "data/sites_fast.json" : "data/sites.json",
-                                  &cfg.site_count);
+    cfg.sites = config_load_sites("platforms", &cfg.site_count);
+    if (cfg.fast_scan && cfg.site_count > 50) cfg.site_count = 50;
     if ((do_scan || list_sites) && (!cfg.sites || cfg.site_count == 0)) {
         fprintf(stderr, "%s[ERROR]%s Could not load site database.\n",
                 cfg.no_color ? "" : RED, cfg.no_color ? "" : RESET);

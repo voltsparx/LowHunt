@@ -1,7 +1,9 @@
 #include <ctype.h>
+#include <dirent.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 
 #include "config.h"
 
@@ -123,52 +125,105 @@ static DetectMethod parse_method(const char* value) {
     return DETECT_STATUS_CODE;
 }
 
-Site* config_load_sites(const char* path, int* count) {
-    long size = 0;
-    char* text = read_file(path, &size);
-    Site* sites;
-    int used = 0;
+static bool parse_site_object(char* object, Site* site) {
+    char error_type[64] = {0};
+    char url[512] = {0};
 
-    if (count) *count = 0;
-    if (!text || size <= 0) {
-        free(text);
-        return NULL;
-    }
+    memset(site, 0, sizeof(*site));
+    get_string_field(object, "name", site->name, sizeof(site->name));
+    get_string_field(object, "url", url, sizeof(url));
+    if (url[0] == '\0') get_string_field(object, "url_template", url, sizeof(url));
+    snprintf(site->url_template, sizeof(site->url_template), "%s", url);
+    get_string_field(object, "errorMsg", site->error_msg, sizeof(site->error_msg));
+    get_string_field(object, "errorUrl", site->error_url, sizeof(site->error_url));
+    get_string_field(object, "errorType", error_type, sizeof(error_type));
+    get_string_field(object, "category", site->category, sizeof(site->category));
+    site->error_code = get_int_field(object, "errorCode", 404);
+    site->method = parse_method(error_type);
+    site->is_nsfw = get_bool_field(object, "isNSFW", false);
 
-    sites = calloc(MAX_SITES, sizeof(Site));
-    if (!sites) {
-        free(text);
-        return NULL;
-    }
+    return site->name[0] != '\0' && site->url_template[0] != '\0';
+}
 
+static int parse_sites_from_text(char* text, Site* sites, int used) {
     for (char* p = strchr(text, '{'); p && used < MAX_SITES; p = strchr(p + 1, '{')) {
         char* end = object_end(p);
         char saved;
-        char error_type[64] = {0};
-        char url[512] = {0};
+        Site site;
 
         if (!end) break;
         saved = *(end + 1);
         *(end + 1) = '\0';
 
-        get_string_field(p, "name", sites[used].name, sizeof(sites[used].name));
-        get_string_field(p, "url", url, sizeof(url));
-        if (url[0] == '\0') get_string_field(p, "url_template", url, sizeof(url));
-        snprintf(sites[used].url_template, sizeof(sites[used].url_template), "%s", url);
-        get_string_field(p, "errorMsg", sites[used].error_msg, sizeof(sites[used].error_msg));
-        get_string_field(p, "errorUrl", sites[used].error_url, sizeof(sites[used].error_url));
-        get_string_field(p, "errorType", error_type, sizeof(error_type));
-        get_string_field(p, "category", sites[used].category, sizeof(sites[used].category));
-        sites[used].error_code = get_int_field(p, "errorCode", 404);
-        sites[used].method = parse_method(error_type);
-        sites[used].is_nsfw = get_bool_field(p, "isNSFW", false);
+        if (parse_site_object(p, &site)) sites[used++] = site;
 
-        if (sites[used].name[0] && sites[used].url_template[0]) used++;
         *(end + 1) = saved;
         p = end;
     }
 
+    return used;
+}
+
+static bool has_json_suffix(const char* name) {
+    size_t len = strlen(name);
+    return len > 5 && strcmp(name + len - 5, ".json") == 0;
+}
+
+static int load_sites_from_file(const char* path, Site* sites, int used) {
+    long size = 0;
+    char* text = read_file(path, &size);
+    if (!text || size <= 0) {
+        free(text);
+        return used;
+    }
+
+    used = parse_sites_from_text(text, sites, used);
     free(text);
+    return used;
+}
+
+static int load_sites_from_directory(const char* path, Site* sites, int used) {
+    DIR* dir = opendir(path);
+    struct dirent* ent;
+
+    if (!dir) return used;
+    while ((ent = readdir(dir)) != NULL && used < MAX_SITES) {
+        char full_path[1024];
+        if (!has_json_suffix(ent->d_name)) continue;
+        snprintf(full_path, sizeof(full_path), "%s/%s", path, ent->d_name);
+        used = load_sites_from_file(full_path, sites, used);
+    }
+    closedir(dir);
+    return used;
+}
+
+static int compare_sites_by_name(const void* a, const void* b) {
+    const Site* left = (const Site*)a;
+    const Site* right = (const Site*)b;
+    return strcmp(left->name, right->name);
+}
+
+Site* config_load_sites(const char* path, int* count) {
+    struct stat st;
+    Site* sites;
+    int used = 0;
+
+    if (count) *count = 0;
+    sites = calloc(MAX_SITES, sizeof(Site));
+    if (!sites) return NULL;
+
+    if (stat(path, &st) != 0) {
+        free(sites);
+        return NULL;
+    }
+
+    if (S_ISDIR(st.st_mode)) {
+        used = load_sites_from_directory(path, sites, used);
+    } else {
+        used = load_sites_from_file(path, sites, used);
+    }
+
+    if (used > 1) qsort(sites, (size_t)used, sizeof(Site), compare_sites_by_name);
     if (count) *count = used;
     return sites;
 }

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Wikidot",
+    "url":  "http://www.wikidot.com/user:info/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "User does not exist.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

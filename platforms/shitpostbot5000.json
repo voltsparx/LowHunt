@@ -1,0 +1,15 @@
+﻿{
+    "name":  "ShitpostBot5000",
+    "url":  "https://www.shitpostbot.com/user/{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

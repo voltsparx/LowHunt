@@ -1,0 +1,15 @@
+﻿{
+    "name":  "quizlet.com",
+    "url":  "https://quizlet.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Hmm, looks like you\u0027re studying old notes",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Realmeye",
+    "url":  "https://www.realmeye.com/player/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, but we either:",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

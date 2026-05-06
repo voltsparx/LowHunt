@@ -1,0 +1,15 @@
+﻿{
+    "name":  "phpRU",
+    "url":  "https://php.ru/forum/members/?username={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Указанный пользователь не найден. Пожалуйста, введите другое имя.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

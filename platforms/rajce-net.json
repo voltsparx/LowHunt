@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Rajce.net",
+    "url":  "https://{}.rajce.idnes.cz/",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[\\w@-]+?$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

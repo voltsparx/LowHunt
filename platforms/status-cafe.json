@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Status Cafe",
+    "url":  "https://status.cafe/users/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

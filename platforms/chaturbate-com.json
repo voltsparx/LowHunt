@@ -1,0 +1,15 @@
+﻿{
+    "name":  "chaturbate.com",
+    "url":  "https://chaturbate.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "HTTP 404 - Page Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  true,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

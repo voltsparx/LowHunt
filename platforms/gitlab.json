@@ -1,0 +1,16 @@
+﻿{
+    "name":  "GitLab",
+    "url":  "https://gitlab.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "[]",
+    "errorUrl":  "",
+    "category":  "coding",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

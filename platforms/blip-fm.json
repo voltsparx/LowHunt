@@ -1,0 +1,15 @@
+﻿{
+    "name":  "blip.fm",
+    "url":  "https://blip.fm/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, but the page you are trying to view does not exist.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

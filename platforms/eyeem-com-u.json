@@ -1,0 +1,15 @@
+﻿{
+    "name":  "eyeem.com-u",
+    "url":  "https://www.eyeem.com/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Whoops! We can\u0027t find the user you\u0027re looking for",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

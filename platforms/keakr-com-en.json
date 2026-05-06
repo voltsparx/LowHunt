@@ -1,0 +1,15 @@
+﻿{
+    "name":  "keakr.com-en",
+    "url":  "https://www.keakr.com/en/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, this page doesn\u0027t exist",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

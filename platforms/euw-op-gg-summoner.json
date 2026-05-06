@@ -1,0 +1,15 @@
+﻿{
+    "name":  "euw.op.gg-summoner",
+    "url":  "https://euw.op.gg/summoner/userName={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Please try again.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "x.com",
+    "url":  "https://www.x.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This account doesnâ€™t exist",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

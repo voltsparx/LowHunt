@@ -1,0 +1,15 @@
+﻿{
+    "name":  "giphy.com",
+    "url":  "https://giphy.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Oops! Thereâ€™s nothing here.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

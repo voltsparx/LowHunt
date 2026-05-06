@@ -1,0 +1,15 @@
+﻿{
+    "name":  "community.oracle.com-people",
+    "url":  "https://community.oracle.com/people/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "User Not Found",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

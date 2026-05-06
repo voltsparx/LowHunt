@@ -1,0 +1,15 @@
+﻿{
+    "name":  "news.ycombinator.com-user",
+    "url":  "https://news.ycombinator.com/user?id={}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "No such user.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

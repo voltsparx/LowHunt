@@ -1,0 +1,15 @@
+﻿{
+    "name":  "aminoapps.com-u",
+    "url":  "https://aminoapps.com/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Ooops, this content does not exist.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

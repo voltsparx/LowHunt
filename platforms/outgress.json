@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Outgress",
+    "url":  "https://outgress.com/agents/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Outgress - Error",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

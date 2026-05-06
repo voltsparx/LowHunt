@@ -1,0 +1,15 @@
+﻿{
+    "name":  "producthunt.com-@",
+    "url":  "https://www.producthunt.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "We seem to have lost this page",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

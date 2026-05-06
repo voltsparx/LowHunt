@@ -1,0 +1,15 @@
+﻿{
+    "name":  "tradingview.com-u",
+    "url":  "https://www.tradingview.com/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "https://www.tnaflix.com/profile/askdjasgdjasgjasggjs",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

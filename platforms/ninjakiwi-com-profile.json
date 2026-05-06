@@ -1,0 +1,15 @@
+﻿{
+    "name":  "ninjakiwi.com-profile",
+    "url":  "https://ninjakiwi.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "This page isnâ€™t working right now",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

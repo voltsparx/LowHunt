@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Gumroad",
+    "url":  "https://www.gumroad.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Page not found (404) - Gumroad",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^[^.]*?$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

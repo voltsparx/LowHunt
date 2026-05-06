@@ -1,0 +1,15 @@
+﻿{
+    "name":  "lolchess.gg-profile",
+    "url":  "https://lolchess.gg/profile/na/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "404 Not Found",
+    "errorUrl":  "",
+    "category":  "gaming",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Cplusplus",
+    "url":  "https://cplusplus.com/user/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ctitle\u003e404 Page Not Found\u003c/title\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

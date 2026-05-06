@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Flipboard",
+    "url":  "https://flipboard.com/@{}",
+    "errorType":  "status_code",
+    "errorCode":  404,
+    "errorMsg":  "",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "^([a-zA-Z0-9_]){1,15}$",
+    "sources":  [
+                    "sherlock"
+                ]
+}

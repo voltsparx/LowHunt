@@ -1,0 +1,15 @@
+﻿{
+    "name":  "lobste.rs-u",
+    "url":  "https://lobste.rs/u/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "The resource you requested was not found, or the story has been deleted.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

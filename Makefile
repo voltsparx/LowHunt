@@ -17,6 +17,8 @@ install: $(TARGET)
 	install -m 755 $(TARGET) /usr/local/bin/lowhunt
 	mkdir -p /usr/share/lowhunt
 	cp -r data/* /usr/share/lowhunt/
+	mkdir -p /usr/share/lowhunt/platforms
+	cp -r platforms/* /usr/share/lowhunt/platforms/
 
 uninstall:
 	rm -f /usr/local/bin/lowhunt

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "etsy.com-shop",
+    "url":  "https://www.etsy.com/shop/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Sorry, the page you were looking for was not found.",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

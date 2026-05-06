@@ -1,0 +1,15 @@
+﻿{
+    "name":  "launchpad.net-~",
+    "url":  "https://launchpad.net/~/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "Lost something?",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}

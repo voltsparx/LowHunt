@@ -1,0 +1,15 @@
+﻿{
+    "name":  "Career.habr",
+    "url":  "https://career.habr.com/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003ch1\u003eОшибка 404\u003c/h1\u003e",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock"
+                ]
+}

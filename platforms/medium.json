@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Medium",
+    "url":  "https://medium.com/@{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "\u003cbody",
+    "errorUrl":  "",
+    "category":  "writing",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "sherlock",
+                    "silinosic-x"
+                ]
+}

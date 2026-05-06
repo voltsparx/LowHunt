@@ -1,0 +1,15 @@
+﻿{
+    "name":  "app.intigriti.com-profile",
+    "url":  "https://app.intigriti.com/profile/{}",
+    "errorType":  "message",
+    "errorCode":  404,
+    "errorMsg":  "We didn\u0027t find what you\u0027re looking for",
+    "errorUrl":  "",
+    "category":  "social",
+    "isNSFW":  false,
+    "request_method":  "GET",
+    "regexCheck":  "",
+    "sources":  [
+                    "tookie-osint"
+                ]
+}
