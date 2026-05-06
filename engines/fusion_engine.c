@@ -1,0 +1,22 @@
+#include <stdlib.h>
+
+#include "engine.h"
+
+static void fusion_run(Engine* self, HttpTask* tasks, int count,
+                       const LowHuntConfig* cfg) {
+    (void)self;
+    int cap = cfg->thread_count * 2;
+    if (cap < 20) cap = 20;
+    if (cap > MAX_THREADS) cap = MAX_THREADS;
+    http_multi_run(tasks, count, cfg->timeout_ms, DEFAULT_USER_AGENT,
+                   cfg->proxy, cap);
+}
+
+Engine* fusion_engine_create(void) {
+    Engine* e = calloc(1, sizeof(Engine));
+    if (!e) return NULL;
+    e->type = ENGINE_FUSION;
+    e->name = "fusion";
+    e->run = fusion_run;
+    return e;
+}
