@@ -38,7 +38,10 @@ if (Get-Command gcc -ErrorAction SilentlyContinue) {
   $sources = @($commonSources)
   $curlProbe = Join-Path $tmpTest "curl_probe.c"
   Set-Content -LiteralPath $curlProbe -Encoding ASCII -Value "#include <curl/curl.h>"
+  $previousPreference = $ErrorActionPreference
+  $ErrorActionPreference = "Continue"
   & gcc -std=c11 -E -Isrc/include $curlProbe *> $null
+  $ErrorActionPreference = $previousPreference
   if ($LASTEXITCODE -eq 0) {
     $sources += "src/net/http.c"
   } else {
