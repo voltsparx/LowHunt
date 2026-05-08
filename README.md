@@ -115,18 +115,18 @@ LowHunt reduces that fragmentation. It gives you one CLI that can:
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────┐
-│ 1. Operator Input                                                  │
-│    usernames, domain, engine, preset, timeout, threads, outputs    │
+│ 1. Operator Input                                                   │
+│    usernames, domain, engine, preset, timeout, threads, outputs     │
 └─────────────────────────────────────────────────────────────────────┘
-                              |
-                              v
+                                 |
+                                 v
 ┌─────────────────────────────────────────────────────────────────────┐
-│ 2. Runtime Planning                                                │
+│ 2. Runtime Planning                                                 │
 │    preset application → engine selection → resource warning logic   │
 └─────────────────────────────────────────────────────────────────────┘
-                              |
-                ┌─────────────┴─────────────┐
-                v                           v
+                                 |
+                   ┌─────────────┴─────────────┐
+                   v                           v
 ┌──────────────────────────────┐  ┌──────────────────────────────────┐
 │ 3A. Username Scan Pipeline   │  │ 3B. Passive Harvest Pipeline     │
 │ platform manifests loaded    │  │ public sources selected          │
@@ -134,18 +134,18 @@ LowHunt reduces that fragmentation. It gives you one CLI that can:
 │ engine executes requests     │  │ contact pages collected          │
 │ results classified           │  │ emails filtered and scored       │
 └──────────────────────────────┘  └──────────────────────────────────┘
-                |                           |
-                └─────────────┬─────────────┘
-                              v
+                   |                           |
+                   └─────────────┬─────────────┘
+                                 v
 ┌─────────────────────────────────────────────────────────────────────┐
-│ 4. Correlation Layer                                               │
+│ 4. Correlation Layer                                                │
 │ profile hits + harvested hosts + same-domain emails → confidence    │
 │ score, overlap analysis, investigation narrative                    │
 └─────────────────────────────────────────────────────────────────────┘
-                              |
-                              v
+                                 |
+                                 v
 ┌─────────────────────────────────────────────────────────────────────┐
-│ 5. Output Layer                                                    │
+│ 5. Output Layer                                                     │
 │ terminal output → file output → stored report bundles               │
 │ report.cli.txt / report.txt / report.json                           │
 └─────────────────────────────────────────────────────────────────────┘
