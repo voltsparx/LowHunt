@@ -23,6 +23,7 @@ $commonSources = @(
   "src/net/harvest_sources.c",
   "src/output/output.c",
   "src/output/report_bundle.c",
+  "src/modules/correlation.c",
   "src/engines/engine_loader.c",
   "src/engines/parallel_engine.c",
   "src/engines/threadpool_engine.c",

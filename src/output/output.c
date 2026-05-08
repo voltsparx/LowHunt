@@ -15,6 +15,22 @@ static const char* status_str(ResultStatus s) {
     }
 }
 
+static void fprint_json_string(FILE* f, const char* s) {
+    if (!f) return;
+    fputc('"', f);
+    for (const char* p = s ? s : ""; *p; p++) {
+        switch (*p) {
+            case '\\': fputs("\\\\", f); break;
+            case '"': fputs("\\\"", f); break;
+            case '\n': fputs("\\n", f); break;
+            case '\r': fputs("\\r", f); break;
+            case '\t': fputs("\\t", f); break;
+            default: fputc(*p, f); break;
+        }
+    }
+    fputc('"', f);
+}
+
 static void summarize_counts(const ResultStore* store, int* found, int* not_found,
                              int* unknown, int* errors) {
     if (found) *found = 0;
@@ -115,4 +131,105 @@ void output_results(const ResultStore* store, const LowHuntConfig* cfg) {
 
     fclose(f);
     printf("\n%s[+]%s Results written to: %s\n", GREEN, RESET, cfg->output_file);
+}
+
+void output_investigation(const ResultStore* store, const HarvestSummary* harvest,
+                          const CorrelationSummary* correlation, const LowHuntConfig* cfg) {
+    FILE* f;
+
+    if (!store || !harvest || !correlation || !cfg || cfg->output_file[0] == '\0') return;
+    f = fopen(cfg->output_file, "w");
+    if (!f) {
+        fprintf(stderr, "%s[ERROR]%s Cannot open output file: %s\n", RED, RESET, cfg->output_file);
+        return;
+    }
+
+    if (strcmp(cfg->output_format, "json") == 0) {
+        fprintf(f, "{\n  \"mode\": \"investigation\",\n  \"preset\": ");
+        fprint_json_string(f, cfg->preset[0] ? cfg->preset : "balanced");
+        fprintf(f, ",\n  \"engine\": ");
+        fprint_json_string(f, cfg->engine[0] ? cfg->engine : "auto");
+        fprintf(f, ",\n  \"domain\": ");
+        fprint_json_string(f, harvest->domain);
+        fprintf(f, ",\n  \"correlation\": {\n    \"confidence\": %d,\n    \"exact_matches\": %d,\n    \"partial_matches\": %d,\n    \"narrative\": ",
+                correlation->confidence_score, correlation->exact_email_matches,
+                correlation->partial_email_matches);
+        fprint_json_string(f, correlation->narrative);
+        fprintf(f, "\n  },\n  \"profiles\": [\n");
+        for (int i = 0; i < store->count; i++) {
+            const ScanResult* r = &store->results[i];
+            fprintf(f, "    {\"username\":");
+            fprint_json_string(f, r->username);
+            fprintf(f, ",\"site\":");
+            fprint_json_string(f, r->site_name);
+            fprintf(f, ",\"status\":");
+            fprint_json_string(f, status_str(r->status));
+            fprintf(f, ",\"url\":");
+            fprint_json_string(f, r->url);
+            fprintf(f, "}%s\n", i + 1 < store->count ? "," : "");
+        }
+        fprintf(f, "  ],\n  \"hosts\": [\n");
+        for (int i = 0; i < harvest->host_count; i++) {
+            fprintf(f, "    {\"host\":");
+            fprint_json_string(f, harvest->hosts[i].value);
+            fprintf(f, ",\"sources\":");
+            fprint_json_string(f, harvest->hosts[i].sources);
+            fprintf(f, ",\"confidence\":%d}%s\n",
+                    harvest->hosts[i].confidence, i + 1 < harvest->host_count ? "," : "");
+        }
+        fprintf(f, "  ],\n  \"emails\": [\n");
+        for (int i = 0; i < harvest->email_count; i++) {
+            fprintf(f, "    {\"email\":");
+            fprint_json_string(f, harvest->emails[i].email);
+            fprintf(f, ",\"page\":");
+            fprint_json_string(f, harvest->emails[i].page);
+            fprintf(f, ",\"confidence\":%d}%s\n",
+                    harvest->emails[i].confidence, i + 1 < harvest->email_count ? "," : "");
+        }
+        fprintf(f, "  ]\n}\n");
+    } else if (strcmp(cfg->output_format, "csv") == 0) {
+        fprintf(f, "section,key,value,meta\n");
+        fprintf(f, "correlation,confidence,%d,\n", correlation->confidence_score);
+        fprintf(f, "correlation,exact_matches,%d,\n", correlation->exact_email_matches);
+        fprintf(f, "correlation,partial_matches,%d,\n", correlation->partial_email_matches);
+        for (int i = 0; i < store->count; i++) {
+            fprintf(f, "profile,%s,%s,%s\n", store->results[i].username,
+                    store->results[i].site_name, status_str(store->results[i].status));
+        }
+        for (int i = 0; i < harvest->host_count; i++) {
+            fprintf(f, "host,%s,%s,%d\n", harvest->domain,
+                    harvest->hosts[i].value, harvest->hosts[i].confidence);
+        }
+        for (int i = 0; i < harvest->email_count; i++) {
+            fprintf(f, "email,%s,%s,%d\n", harvest->domain,
+                    harvest->emails[i].email, harvest->emails[i].confidence);
+        }
+    } else {
+        fprintf(f, "LowHunt investigation\n");
+        fprintf(f, "==============================\n");
+        fprintf(f, "Domain: %s\n", harvest->domain);
+        fprintf(f, "Preset: %s\n", cfg->preset[0] ? cfg->preset : "balanced");
+        fprintf(f, "Engine: %s\n", cfg->engine[0] ? cfg->engine : "auto");
+        fprintf(f, "Correlation confidence: %d\n", correlation->confidence_score);
+        fprintf(f, "Narrative: %s\n\n", correlation->narrative);
+        fprintf(f, "Profiles:\n");
+        for (int i = 0; i < store->count; i++) {
+            const ScanResult* r = &store->results[i];
+            if (!cfg->very_verbose && r->status != RESULT_FOUND) continue;
+            fprintf(f, "  [%s] %s :: %s\n", status_str(r->status), r->site_name, r->url);
+        }
+        fprintf(f, "\nHosts:\n");
+        for (int i = 0; i < harvest->host_count; i++) {
+            fprintf(f, "  %s  [sources=%s confidence=%d]\n",
+                    harvest->hosts[i].value, harvest->hosts[i].sources, harvest->hosts[i].confidence);
+        }
+        fprintf(f, "\nEmails:\n");
+        for (int i = 0; i < harvest->email_count; i++) {
+            fprintf(f, "  %s  <-  %s  [confidence=%d]\n",
+                    harvest->emails[i].email, harvest->emails[i].page, harvest->emails[i].confidence);
+        }
+    }
+
+    fclose(f);
+    printf("\n%s[+]%s Investigation written to: %s\n", GREEN, RESET, cfg->output_file);
 }

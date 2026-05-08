@@ -14,6 +14,7 @@
 #include "http.h"
 #include "lowhunt.h"
 #include "metadata.h"
+#include "correlation.h"
 #include "output.h"
 #include "report_bundle.h"
 #include "resource_guard.h"
@@ -60,6 +61,7 @@ int main(int argc, char** argv) {
     char domain[256] = {0};
     char source[128] = "crtsh";
     char explain_topic[64] = {0};
+    CorrelationSummary correlation;
     HarvestSummary harvest_summary;
     int limit = 200;
     int opt;
@@ -95,6 +97,7 @@ int main(int argc, char** argv) {
 
     memset(&cfg, 0, sizeof(cfg));
     memset(&store, 0, sizeof(store));
+    memset(&correlation, 0, sizeof(correlation));
     memset(&harvest_summary, 0, sizeof(harvest_summary));
     cfg.timeout_ms = DEFAULT_TIMEOUT_MS;
     cfg.thread_count = 20;
@@ -186,7 +189,9 @@ int main(int argc, char** argv) {
     }
 
     http_global_init();
-    cfg.sites = config_load_sites("platforms", &cfg.site_count);
+    if (do_scan || list_sites) {
+        cfg.sites = config_load_sites("platforms", &cfg.site_count);
+    }
 
     if (cfg.fast_scan && cfg.site_count > 50) cfg.site_count = 50;
     if ((do_scan || list_sites) && (!cfg.sites || cfg.site_count == 0)) {
@@ -200,11 +205,11 @@ int main(int argc, char** argv) {
         output_list_sites(cfg.sites, cfg.site_count);
     } else if (list_sources) {
         harvester_print_sources();
-    } else if (do_harvest) {
+    } else if (do_harvest && !do_scan) {
         harvester_run(domain, source, limit, &cfg, &harvest_summary);
         report_bundle_write_harvest(&harvest_summary, &cfg);
         harvester_summary_free(&harvest_summary);
-    } else if (do_scan && cfg.target_count > 0) {
+    } else if (do_scan && !do_harvest && cfg.target_count > 0) {
         pthread_mutex_init(&store.lock, NULL);
         scanner_run(&cfg, &store);
         brief_report_process(&store, &cfg);
@@ -213,6 +218,26 @@ int main(int argc, char** argv) {
         }
         output_results(&store, &cfg);
         report_bundle_write_scan(&store, &cfg);
+        pthread_mutex_destroy(&store.lock);
+        free(store.results);
+    } else if (do_scan && do_harvest && cfg.target_count > 0) {
+        LowHuntConfig runtime_cfg = cfg;
+        runtime_cfg.output_file[0] = '\0';
+        pthread_mutex_init(&store.lock, NULL);
+        harvester_run(domain, source, limit, &runtime_cfg, &harvest_summary);
+        scanner_run(&cfg, &store);
+        brief_report_process(&store, &cfg);
+        if (cfg.mod_intelligence || strcasecmp(cfg.engine, "intelligence") == 0) {
+            intelligence_process(&store);
+        }
+        output_results(&store, &runtime_cfg);
+        correlation_analyze(&store, &harvest_summary, &cfg, &correlation);
+        correlation_print(&correlation, &cfg);
+        output_investigation(&store, &harvest_summary, &correlation, &cfg);
+        report_bundle_write_scan(&store, &cfg);
+        report_bundle_write_harvest(&harvest_summary, &cfg);
+        report_bundle_write_investigation(&store, &harvest_summary, &correlation, &cfg);
+        harvester_summary_free(&harvest_summary);
         pthread_mutex_destroy(&store.lock);
         free(store.results);
     }

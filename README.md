@@ -38,6 +38,7 @@ install\windows.cmd
 ./lowhunt alice --engine fusion -vv
 ./lowhunt -u alice -o results.json --format json
 ./lowhunt -d example.com -b all
+./lowhunt alice bob -d example.com -b all --intel
 ./lowhunt --list-sources
 ./lowhunt --about
 ./lowhunt --explain engine
@@ -60,6 +61,12 @@ Report bundles:
 
 - every scan and harvest now stores a small offline bundle under `~/.lowhunt/output/reports/<target>/<timestamp>/`
 - bundle artifacts include `report.cli.txt`, `report.txt`, and `report.json`
+
+Combined investigations:
+
+- when usernames and `-d <domain>` are supplied together, LowHunt runs both workflows in one session
+- it then produces a correlation summary that compares profile hits against harvested same-domain contact identifiers
+- a separate combined investigation bundle is also written for later review
 
 ## Manual
 

@@ -25,6 +25,22 @@ static const char* status_str(ResultStatus s) {
     }
 }
 
+static void fprint_json_string(FILE* f, const char* s) {
+    if (!f) return;
+    fputc('"', f);
+    for (const char* p = s ? s : ""; *p; p++) {
+        switch (*p) {
+            case '\\': fputs("\\\\", f); break;
+            case '"': fputs("\\\"", f); break;
+            case '\n': fputs("\\n", f); break;
+            case '\r': fputs("\\r", f); break;
+            case '\t': fputs("\\t", f); break;
+            default: fputc(*p, f); break;
+        }
+    }
+    fputc('"', f);
+}
+
 static const char* home_dir(void) {
     const char* home = getenv("HOME");
     if (home && home[0]) return home;
@@ -244,4 +260,60 @@ void report_bundle_write_harvest(const HarvestSummary* summary, const LowHuntCon
     }
 
     printf("\n[+] Stored report bundle: %s\n", dir);
+}
+
+void report_bundle_write_investigation(const ResultStore* store, const HarvestSummary* summary,
+                                       const CorrelationSummary* correlation,
+                                       const LowHuntConfig* cfg) {
+    char dir[1024];
+    char txt_path[1152];
+    char json_path[1152];
+    FILE* f;
+    const char* target = (cfg && cfg->target_count == 1) ? cfg->targets[0] : "investigation";
+
+    if (!store || !summary || !correlation || !cfg) return;
+    ensure_report_dir(target, dir, sizeof(dir));
+
+    snprintf(txt_path, sizeof(txt_path), "%s/report.txt", dir);
+    snprintf(json_path, sizeof(json_path), "%s/report.json", dir);
+
+    f = fopen(txt_path, "w");
+    if (f) {
+        fprintf(f, "LowHunt combined investigation report\n");
+        fprintf(f, "Preset: %s\n", cfg->preset[0] ? cfg->preset : "balanced");
+        fprintf(f, "Engine: %s\n", cfg->engine[0] ? cfg->engine : "auto");
+        fprintf(f, "Domain: %s\n", summary->domain);
+        fprintf(f, "Correlation confidence: %d\n", correlation->confidence_score);
+        fprintf(f, "Narrative: %s\n\n", correlation->narrative);
+        fprintf(f, "Profiles found: %d\n", correlation->found_profiles);
+        fprintf(f, "Hosts: %d\n", summary->host_count);
+        fprintf(f, "Emails: %d\n", summary->email_count);
+        fprintf(f, "Exact username/email matches: %d\n", correlation->exact_email_matches);
+        fprintf(f, "Loose username/email matches: %d\n\n", correlation->partial_email_matches);
+        for (int i = 0; i < store->count; i++) {
+            const ScanResult* r = &store->results[i];
+            if (r->status != RESULT_FOUND && !cfg->very_verbose) continue;
+            fprintf(f, "[%s] %s :: %s\n", status_str(r->status), r->site_name, r->url);
+        }
+        fclose(f);
+    }
+
+    f = fopen(json_path, "w");
+    if (f) {
+        fprintf(f, "{\n");
+        fprintf(f, "  \"domain\": ");
+        fprint_json_string(f, summary->domain);
+        fprintf(f, ",\n  \"correlation\": {\"confidence\": %d, \"narrative\": ",
+                correlation->confidence_score);
+        fprint_json_string(f, correlation->narrative);
+        fprintf(f, ", \"exact_matches\": %d, \"partial_matches\": %d},\n",
+                correlation->exact_email_matches, correlation->partial_email_matches);
+        fprintf(f, "  \"hosts\": %d,\n", summary->host_count);
+        fprintf(f, "  \"emails\": %d,\n", summary->email_count);
+        fprintf(f, "  \"found_profiles\": %d\n", correlation->found_profiles);
+        fprintf(f, "}\n");
+        fclose(f);
+    }
+
+    printf("\n[+] Stored investigation bundle: %s\n", dir);
 }

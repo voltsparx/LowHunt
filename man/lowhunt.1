@@ -9,6 +9,9 @@ lowhunt \- fast public OSINT for authorized username and domain analysis
 \-d DOMAIN [OPTIONS]
 .br
 .B lowhunt
+<username> \-d DOMAIN [OPTIONS]
+.br
+.B lowhunt
 \-\-about
 .br
 .B lowhunt
@@ -19,8 +22,9 @@ lowhunt
 .SH DESCRIPTION
 LowHunt is a native C reconnaissance tool for public-data-only OSINT on
 authorized targets. It checks username footprints across platform manifests,
-harvests passive hostnames for domains, and summarizes findings with multiple
-execution engines and investigator-friendly terminal output.
+harvests passive hostnames for domains, supports combined investigation runs,
+and summarizes findings with multiple execution engines and investigator-friendly
+terminal output.
 .PP
 LowHunt does not bypass authentication or protections. Use it only on targets
 you own or have explicit written permission to assess.
@@ -33,10 +37,13 @@ Add a username target.
 Run passive domain hostname harvesting.
 .TP
 .B \-b, \-\-source SOURCE
-Select harvest source. Current values: crtsh, all.
+Select harvest source. Current values: crtsh, rapiddns, wayback, all.
 .TP
 .B \-l, \-\-limit N
 Limit harvested hostnames.
+.TP
+.B \-\-preset NAME
+Apply operator defaults: beginner, balanced, or aggressive.
 .TP
 .B \-f, \-\-fast
 Trim the loaded platform set to the fast subset.
@@ -80,6 +87,9 @@ Include NSFW platforms.
 .B \-\-list-sites
 Print the loaded platform catalog.
 .TP
+.B \-\-list-sources
+Print the wired passive harvest sources.
+.TP
 .B \-\-about
 Print the banner and project metadata.
 .TP
@@ -99,8 +109,11 @@ Fast structured scan of one username with high concurrency.
 .B lowhunt \-u alice \-u bob \-\-threads 120 \-\-intel
 Multi-target scan with explicit concurrency and post-run summary.
 .TP
-.B lowhunt \-d example.com \-b crtsh \-o hosts.json \-\-format json
-Harvest public hostnames and save them as JSON.
+.B lowhunt \-d example.com \-b all \-o hosts.json \-\-format json
+Harvest fused passive host intelligence and save it as JSON.
+.TP
+.B lowhunt alice bob \-d example.com \-b all \-\-intel
+Run a combined investigation with profile scanning, passive harvest, and correlation.
 .TP
 .B lowhunt \-\-about
 Show the project overview and repository details.
@@ -121,5 +134,12 @@ install/windows.ps1
 install/windows.cmd
 .PP
 The installers place the application in a user-local directory, write a managed install manifest, create launchers, and add man page access for shell environments that support it.
+.SH REPORTS
+Each scan or harvest stores an offline report bundle under:
+.IP
+~/.lowhunt/output/reports/<target>/<timestamp>/
+.PP
+Bundles include CLI, TXT, and JSON artifacts. Combined investigations also
+write a fused investigation summary with correlation confidence and narrative text.
 .SH SEE ALSO
 .BR crt.sh (1)

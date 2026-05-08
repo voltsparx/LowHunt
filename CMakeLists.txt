@@ -3,7 +3,7 @@ project(lowhunt C)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -O2 -pthread")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wshadow -Wformat=2 -O2 -pthread")
 
 find_package(CURL REQUIRED)
 
@@ -33,6 +33,7 @@ set(SOURCES
     src/net/harvest_sources.c
     src/output/output.c
     src/output/report_bundle.c
+    src/modules/correlation.c
     src/engines/engine_loader.c
     src/engines/parallel_engine.c
     src/engines/threadpool_engine.c

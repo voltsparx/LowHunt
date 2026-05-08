@@ -18,6 +18,9 @@ static const HelpTopic g_topics[] = {
     {"scan", "Search usernames across the loaded platform set.",
      "lowhunt alice bob --engine fusion -vv",
      "Use positional usernames or repeat -u. Add -vv for structured terminal output of found, unknown, and failed checks."},
+    {"investigate", "Run usernames and a domain together as one case workflow.",
+     "lowhunt alice bob -d example.com -b all --intel",
+     "Combined investigations run passive domain harvest and username scanning in one session, then print a fused correlation summary and store a combined report bundle."},
     {"preset", "Apply curated defaults for speed, clarity, or steadiness.",
      "lowhunt --preset beginner alice",
      "beginner favors readable output and investigator summaries. balanced keeps the default feel. aggressive pushes faster concurrency and full visibility."},
@@ -72,7 +75,8 @@ void help_menu_print(const char* prog) {
     printf("%s%s Help%s\n\n", BOLD, meta->name, RESET);
     printf("Usage:\n");
     printf("  %s [OPTIONS] <username> [username2 ...]\n", prog);
-    printf("  %s -d <domain> [OPTIONS]\n\n", prog);
+    printf("  %s -d <domain> [OPTIONS]\n", prog);
+    printf("  %s <username> -d <domain> [OPTIONS]\n\n", prog);
 
     printf("Core:\n");
     printf("  -u, --username <name>  Add a username target\n");
@@ -105,12 +109,13 @@ void help_menu_print(const char* prog) {
     printf("  %s alice --engine fusion -vv\n", prog);
     printf("  %s -u alice -u bob --threads 120 --intel\n", prog);
     printf("  %s -d example.com -b crtsh -o hosts.json --format json\n", prog);
+    printf("  %s alice bob -d example.com -b all --intel\n", prog);
     printf("  %s --list-sources\n", prog);
     printf("  %s --about\n", prog);
     printf("  %s --explain engine\n\n", prog);
 
     printf("Topics:\n");
-    printf("  scan, preset, harvest, sources, engine, fusion, stabilizer, threads, -v, -vv, about, reports, manual\n\n");
+    printf("  scan, investigate, preset, harvest, sources, engine, fusion, stabilizer, threads, -v, -vv, about, reports, manual\n\n");
     printf("%sAuthorized public-data OSINT only.%s\n", YELLOW, RESET);
 }
 
