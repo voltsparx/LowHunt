@@ -23,6 +23,10 @@ void brief_report_process(const ResultStore* store, const LowHuntConfig* cfg) {
 
     printf("\n%s[brief]%s Investigator summary\n", CYAN, RESET);
     printf("Checked %d result(s) across %d target(s).\n", store->count, cfg->target_count);
+    printf("Preset: %s | Engine: %s | Threads requested: %d\n",
+           cfg->preset[0] ? cfg->preset : "balanced",
+           cfg->engine[0] ? cfg->engine : "auto",
+           cfg->thread_count);
 
     if (found == 0) {
         printf("No confirmed public profile hits were found in this run.\n");
@@ -44,7 +48,9 @@ void brief_report_process(const ResultStore* store, const LowHuntConfig* cfg) {
     }
     if (cfg->very_verbose) {
         printf("Not-found responses: %d\n", not_found);
+        printf("Found responses: %d\n", found);
         printf("Output mode: %s\n", cfg->output_format);
         printf("Engine preference: %s\n", cfg->engine[0] ? cfg->engine : "auto");
+        printf("Proxy/Tor posture: %s\n", (cfg->tor_enabled || cfg->proxy[0]) ? "relayed" : "direct");
     }
 }

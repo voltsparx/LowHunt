@@ -18,9 +18,15 @@ static const HelpTopic g_topics[] = {
     {"scan", "Search usernames across the loaded platform set.",
      "lowhunt alice bob --engine fusion -vv",
      "Use positional usernames or repeat -u. Add -vv for structured terminal output of found, unknown, and failed checks."},
+    {"preset", "Apply curated defaults for speed, clarity, or steadiness.",
+     "lowhunt --preset beginner alice",
+     "beginner favors readable output and investigator summaries. balanced keeps the default feel. aggressive pushes faster concurrency and full visibility."},
     {"harvest", "Harvest public hostnames for a domain from passive sources.",
      "lowhunt -d example.com -b crtsh -l 200",
-     "Harvest mode is for public certificate and related hostname discovery. It does not authenticate or bypass protections."},
+     "Harvest mode is for public certificate, contact-page, and same-domain email discovery from public pages only. Built-in filters suppress noisy addresses like noreply, asset references, and off-domain hits."},
+    {"sources", "List available passive harvest sources.",
+     "lowhunt --list-sources",
+     "Shows the currently wired public harvest sources. 'all' now fuses crtsh, rapiddns, and wayback to raise hostname confidence when results overlap."},
     {"engine", "Choose how LowHunt executes requests.",
      "lowhunt --engine auto|threadpool|fusion|async|parallel|stabilizer|sync USERNAME",
      "auto picks a strategy from workload size and network posture. stabilizer favors steadier pacing. fusion and parallel push for speed."},
@@ -42,6 +48,9 @@ static const HelpTopic g_topics[] = {
     {"about", "Show project information, banner, safety, and repository details.",
      "lowhunt --about",
      "about prints the banner first and then a quick project overview, contact details, repository URL, and scope reminder."},
+    {"reports", "Review the stored report bundle after a run.",
+     "lowhunt alice && cat ~/.lowhunt/output/reports/batch/<timestamp>/report.txt",
+     "Every scan and harvest now stores a small offline bundle with CLI, TXT, and JSON artifacts under ~/.lowhunt/output/reports/."},
     {"manual", "Read the installed manual page.",
      "man lowhunt",
      "The manual page is installed into the local man path by the managed installer scripts in install/."}
@@ -72,6 +81,7 @@ void help_menu_print(const char* prog) {
     printf("  -l, --limit <n>        Limit harvested hostnames\n");
     printf("  -f, --fast             Trim the loaded platform set to the fast subset\n");
     printf("  -s, --site <name>      Limit scanning to one platform\n");
+    printf("  --preset <name>        beginner, balanced, or aggressive\n");
     printf("  --engine <name>        auto, threadpool, fusion, async, parallel, stabilizer, sync\n");
     printf("  -t, --timeout <ms>     Per-request timeout in milliseconds\n");
     printf("  -T, --threads <n>      Requested concurrency budget\n");
@@ -84,20 +94,23 @@ void help_menu_print(const char* prog) {
     printf("  --format <fmt>         txt, json, or csv\n");
     printf("  --nsfw                 Include NSFW platforms\n");
     printf("  --list-sites           List supported platforms\n");
+    printf("  --list-sources         List available passive harvest sources\n");
     printf("  --about                Show banner and project details\n");
     printf("  --explain <topic>      Explain a command or concept\n");
     printf("  --version              Print the current version\n");
     printf("  -h, --help             Show this help menu\n\n");
 
     printf("Examples:\n");
+    printf("  %s alice --preset beginner\n", prog);
     printf("  %s alice --engine fusion -vv\n", prog);
     printf("  %s -u alice -u bob --threads 120 --intel\n", prog);
     printf("  %s -d example.com -b crtsh -o hosts.json --format json\n", prog);
+    printf("  %s --list-sources\n", prog);
     printf("  %s --about\n", prog);
     printf("  %s --explain engine\n\n", prog);
 
     printf("Topics:\n");
-    printf("  scan, harvest, engine, fusion, stabilizer, threads, -v, -vv, about, manual\n\n");
+    printf("  scan, preset, harvest, sources, engine, fusion, stabilizer, threads, -v, -vv, about, reports, manual\n\n");
     printf("%sAuthorized public-data OSINT only.%s\n", YELLOW, RESET);
 }
 

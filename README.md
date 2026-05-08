@@ -1,6 +1,6 @@
 # LowHunt
 
-LowHunt is a native C OSINT tool for authorized username and domain footprint checks against publicly available data. It uses one JSON manifest per platform under `platforms/`, libcurl-based HTTP probing, passive hostname harvesting, multiple execution engines, and investigator-friendly terminal summaries.
+LowHunt is a native C OSINT tool for authorized username and domain footprint checks against publicly available data. It uses one JSON manifest per platform under `platforms/`, libcurl-based HTTP probing, passive hostname harvesting, multiple execution engines, beginner-friendly presets, confidence-aware passive source fusion, and investigator-friendly terminal summaries.
 
 ## Build
 
@@ -34,13 +34,32 @@ install\windows.cmd
 ## Usage
 
 ```sh
+./lowhunt alice --preset beginner
 ./lowhunt alice --engine fusion -vv
 ./lowhunt -u alice -o results.json --format json
-./lowhunt -d example.com -b crtsh
+./lowhunt -d example.com -b all
+./lowhunt --list-sources
 ./lowhunt --about
 ./lowhunt --explain engine
 ./lowhunt --list-sites
 ```
+
+Presets:
+
+- `beginner`: steadier defaults, investigator summary enabled, easier-to-read output
+- `balanced`: default behavior
+- `aggressive`: fuller output and faster engine bias for large runs
+
+Passive harvest notes:
+
+- `-b all` fuses the currently wired public passive sources: `crtsh`, `rapiddns`, and `wayback`
+- overlapping hostnames gain higher confidence scores
+- same-domain contact emails are collected from public contact-oriented pages with built-in noise filtering
+
+Report bundles:
+
+- every scan and harvest now stores a small offline bundle under `~/.lowhunt/output/reports/<target>/<timestamp>/`
+- bundle artifacts include `report.cli.txt`, `report.txt`, and `report.json`
 
 ## Manual
 

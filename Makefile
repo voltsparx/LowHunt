@@ -1,10 +1,11 @@
 CC      ?= gcc
-CFLAGS  ?= -std=c11 -Wall -Wextra -O2 -Isrc/include -pthread
+INCLUDES = -Isrc/include -Isrc/app -Isrc/config -Isrc/core -Isrc/engines -Isrc/net -Isrc/output -Isrc/ui -Isrc/modules
+CFLAGS  ?= -std=c11 -Wall -Wextra -O2 $(INCLUDES) -pthread
 LDFLAGS ?= -lcurl -lpthread -lm
 SRCS    = src/app/main.c src/config/config.c src/core/utils.c src/core/metadata.c src/core/resource_guard.c \
           src/ui/banner.c src/ui/help_menu.c \
-          src/net/http.c src/net/scanner.c src/net/harvester.c \
-          src/output/output.c \
+          src/net/http.c src/net/scanner.c src/net/harvester.c src/net/harvest_sources.c \
+          src/output/output.c src/output/report_bundle.c \
           src/engines/engine_loader.c src/engines/parallel_engine.c src/engines/threadpool_engine.c \
           src/engines/sync_engine.c src/engines/async_engine.c src/engines/fusion_engine.c \
           src/engines/stabilizer_engine.c src/engines/intelligence_engine.c src/engines/brief_report_engine.c

@@ -15,12 +15,37 @@
 #include "lowhunt.h"
 #include "metadata.h"
 #include "output.h"
+#include "report_bundle.h"
 #include "resource_guard.h"
 #include "scanner.h"
 
 static void add_target(LowHuntConfig* cfg, const char* username) {
     if (!cfg || !username || cfg->target_count >= MAX_TARGETS) return;
     snprintf(cfg->targets[cfg->target_count++], sizeof(cfg->targets[0]), "%s", username);
+}
+
+static void apply_preset(LowHuntConfig* cfg, const char* preset) {
+    if (!cfg || !preset || !preset[0]) return;
+
+    if (strcasecmp(preset, "beginner") == 0) {
+        cfg->verbose = true;
+        cfg->very_verbose = false;
+        cfg->mod_intelligence = true;
+        if (cfg->thread_count < 12) cfg->thread_count = 12;
+        if (strcasecmp(cfg->engine, "auto") == 0) {
+            snprintf(cfg->engine, sizeof(cfg->engine), "stabilizer");
+        }
+    } else if (strcasecmp(preset, "aggressive") == 0) {
+        cfg->verbose = true;
+        cfg->very_verbose = true;
+        cfg->mod_intelligence = true;
+        if (cfg->thread_count < 64) cfg->thread_count = 64;
+        if (strcasecmp(cfg->engine, "auto") == 0) {
+            snprintf(cfg->engine, sizeof(cfg->engine), "fusion");
+        }
+    } else {
+        snprintf(cfg->engine, sizeof(cfg->engine), "%s", cfg->engine[0] ? cfg->engine : "auto");
+    }
 }
 
 int main(int argc, char** argv) {
@@ -30,10 +55,12 @@ int main(int argc, char** argv) {
     bool do_scan = false;
     bool do_harvest = false;
     bool list_sites = false;
+    bool list_sources = false;
     bool show_about = false;
     char domain[256] = {0};
     char source[128] = "crtsh";
     char explain_topic[64] = {0};
+    HarvestSummary harvest_summary;
     int limit = 200;
     int opt;
     int idx = 0;
@@ -47,6 +74,7 @@ int main(int argc, char** argv) {
         {"domain", required_argument, 0, 'd'},
         {"source", required_argument, 0, 'b'},
         {"limit", required_argument, 0, 'l'},
+        {"preset", required_argument, 0, 2},
         {"tor", no_argument, 0, 3},
         {"proxy", required_argument, 0, 4},
         {"timeout", required_argument, 0, 't'},
@@ -61,15 +89,18 @@ int main(int argc, char** argv) {
         {"help", no_argument, 0, 'h'},
         {"version", no_argument, 0, 7},
         {"list-sites", no_argument, 0, 8},
+        {"list-sources", no_argument, 0, 13},
         {0, 0, 0, 0}
     };
 
     memset(&cfg, 0, sizeof(cfg));
     memset(&store, 0, sizeof(store));
+    memset(&harvest_summary, 0, sizeof(harvest_summary));
     cfg.timeout_ms = DEFAULT_TIMEOUT_MS;
     cfg.thread_count = 20;
     snprintf(cfg.output_format, sizeof(cfg.output_format), "txt");
     snprintf(cfg.engine, sizeof(cfg.engine), "auto");
+    snprintf(cfg.preset, sizeof(cfg.preset), "balanced");
 
     while ((opt = getopt_long(argc, argv, "u:fs:d:b:l:t:T:o:vh", long_opts, &idx)) != -1) {
         switch (opt) {
@@ -80,6 +111,7 @@ int main(int argc, char** argv) {
             case 'd': snprintf(domain, sizeof(domain), "%s", optarg); do_harvest = true; break;
             case 'b': snprintf(source, sizeof(source), "%s", optarg); break;
             case 'l': limit = atoi(optarg); break;
+            case 2: snprintf(cfg.preset, sizeof(cfg.preset), "%s", optarg); break;
             case 3:
                 snprintf(cfg.proxy, sizeof(cfg.proxy), "socks5://127.0.0.1:9050");
                 cfg.tor_enabled = true;
@@ -102,6 +134,7 @@ int main(int argc, char** argv) {
                 printf("%s %s\n", meta->name, meta->version);
                 return 0;
             case 8: list_sites = true; break;
+            case 13: list_sources = true; break;
             default:
                 help_menu_print(argv[0]);
                 return 1;
@@ -117,6 +150,15 @@ int main(int argc, char** argv) {
     cfg.very_verbose = verbosity >= 2;
     if (cfg.thread_count < 1) cfg.thread_count = 1;
     if (cfg.timeout_ms < 1000) cfg.timeout_ms = 1000;
+    apply_preset(&cfg, cfg.preset);
+
+    if (strcasecmp(cfg.preset, "beginner") != 0 &&
+        strcasecmp(cfg.preset, "balanced") != 0 &&
+        strcasecmp(cfg.preset, "aggressive") != 0) {
+        fprintf(stderr, "%s[ERROR]%s Unknown preset: %s\n", RED, RESET, cfg.preset);
+        help_menu_print(argv[0]);
+        return 1;
+    }
 
     if (show_about) {
         about_print();
@@ -134,12 +176,12 @@ int main(int argc, char** argv) {
 
     banner_print();
 
-    if (!do_scan && !do_harvest && !list_sites) {
+    if (!do_scan && !do_harvest && !list_sites && !list_sources) {
         help_menu_print(argv[0]);
         return 0;
     }
 
-    if (cfg.thread_count > 50 && do_scan) {
+    if (cfg.thread_count > 50 && (do_scan || do_harvest)) {
         resource_guard_confirm_threads(cfg.thread_count);
     }
 
@@ -156,8 +198,12 @@ int main(int argc, char** argv) {
 
     if (list_sites) {
         output_list_sites(cfg.sites, cfg.site_count);
+    } else if (list_sources) {
+        harvester_print_sources();
     } else if (do_harvest) {
-        harvester_run(domain, source, limit, &cfg);
+        harvester_run(domain, source, limit, &cfg, &harvest_summary);
+        report_bundle_write_harvest(&harvest_summary, &cfg);
+        harvester_summary_free(&harvest_summary);
     } else if (do_scan && cfg.target_count > 0) {
         pthread_mutex_init(&store.lock, NULL);
         scanner_run(&cfg, &store);
@@ -166,6 +212,7 @@ int main(int argc, char** argv) {
             intelligence_process(&store);
         }
         output_results(&store, &cfg);
+        report_bundle_write_scan(&store, &cfg);
         pthread_mutex_destroy(&store.lock);
         free(store.results);
     }

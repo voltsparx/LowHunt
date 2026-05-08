@@ -60,6 +60,7 @@ typedef struct {
     bool nsfw;
     char engine[32];
     bool mod_intelligence;
+    char preset[32];
 } LowHuntConfig;
 
 typedef struct {

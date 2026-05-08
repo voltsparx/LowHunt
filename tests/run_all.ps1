@@ -20,7 +20,9 @@ $commonSources = @(
   "src/ui/help_menu.c",
   "src/net/scanner.c",
   "src/net/harvester.c",
+  "src/net/harvest_sources.c",
   "src/output/output.c",
+  "src/output/report_bundle.c",
   "src/engines/engine_loader.c",
   "src/engines/parallel_engine.c",
   "src/engines/threadpool_engine.c",
@@ -36,11 +38,22 @@ $commonSources = @(
 
 if (Get-Command gcc -ErrorAction SilentlyContinue) {
   $sources = @($commonSources)
+  $includeArgs = @(
+    "-Isrc/include",
+    "-Isrc/app",
+    "-Isrc/config",
+    "-Isrc/core",
+    "-Isrc/engines",
+    "-Isrc/net",
+    "-Isrc/output",
+    "-Isrc/ui",
+    "-Isrc/modules"
+  )
   $curlProbe = Join-Path $tmpTest "curl_probe.c"
   Set-Content -LiteralPath $curlProbe -Encoding ASCII -Value "#include <curl/curl.h>"
   $previousPreference = $ErrorActionPreference
   $ErrorActionPreference = "Continue"
-  & gcc -std=c11 -E -Isrc/include $curlProbe *> $null
+  & gcc -std=c11 -E @includeArgs $curlProbe *> $null
   $ErrorActionPreference = $previousPreference
   if ($LASTEXITCODE -eq 0) {
     $sources += "src/net/http.c"
@@ -48,7 +61,7 @@ if (Get-Command gcc -ErrorAction SilentlyContinue) {
     Write-Host "libcurl headers not found; skipped syntax check for src/net/http.c."
   }
 
-  & gcc -std=c11 -Wall -Wextra -Isrc/include -fsyntax-only @sources *> $syntaxLog
+  & gcc -std=c11 -Wall -Wextra @includeArgs -fsyntax-only @sources *> $syntaxLog
   if ($LASTEXITCODE -ne 0) {
     Get-Content -LiteralPath $syntaxLog
     throw "C syntax check failed"

@@ -7,7 +7,17 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -O2 -pthread")
 
 find_package(CURL REQUIRED)
 
-include_directories(src/include)
+include_directories(
+    src/include
+    src/app
+    src/config
+    src/core
+    src/engines
+    src/net
+    src/output
+    src/ui
+    src/modules
+)
 
 set(SOURCES
     src/app/main.c
@@ -20,7 +30,9 @@ set(SOURCES
     src/net/http.c
     src/net/scanner.c
     src/net/harvester.c
+    src/net/harvest_sources.c
     src/output/output.c
+    src/output/report_bundle.c
     src/engines/engine_loader.c
     src/engines/parallel_engine.c
     src/engines/threadpool_engine.c
