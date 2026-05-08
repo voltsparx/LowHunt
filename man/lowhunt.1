@@ -28,6 +28,20 @@ terminal output.
 .PP
 LowHunt does not bypass authentication or protections. Use it only on targets
 you own or have explicit written permission to assess.
+.SH OVERVIEW
+LowHunt is built to reduce investigation sprawl. Instead of forcing operators
+to switch between one tool for usernames, another for passive domain collection,
+and a separate reporting workflow, it provides a single structured CLI for:
+.IP
+\[bu] username footprint scanning
+.br
+\[bu] passive hostname intelligence
+.br
+\[bu] same-domain public contact email collection
+.br
+\[bu] cross-signal correlation
+.br
+\[bu] direct outputs and stored report bundles
 .SH OPTIONS
 .TP
 .B \-u, \-\-username NAME
@@ -101,6 +115,73 @@ Print the current version.
 .TP
 .B \-h, \-\-help
 Show the help menu.
+.SH PRESETS
+.TP
+.B beginner
+Readable output, steadier defaults, and investigator summary enabled.
+.TP
+.B balanced
+Default operating posture.
+.TP
+.B aggressive
+Higher concurrency floor, fuller terminal visibility, and fast-engine bias.
+.SH ENGINES
+.TP
+.B auto
+Chooses an engine from workload size and network posture.
+.TP
+.B threadpool
+Balanced worker model for general use.
+.TP
+.B parallel
+Simple parallel execution for moderate workloads.
+.TP
+.B async
+Cooperative concurrency for larger I/O-heavy runs.
+.TP
+.B fusion
+High-throughput engine for larger fast runs.
+.TP
+.B stabilizer
+Lower-pressure pacing for Tor, proxies, and fragile environments.
+.TP
+.B sync
+Sequential execution for tiny runs and troubleshooting.
+.SH PASSIVE HARVEST
+Harvest mode is restricted to public passive collection and public page review.
+The currently wired passive sources are:
+.IP
+\[bu] crtsh
+.br
+\[bu] rapiddns
+.br
+\[bu] wayback
+.br
+\[bu] all
+.PP
+When
+.B all
+is selected, LowHunt fuses overlapping host findings and raises confidence when
+multiple public sources support the same host.
+.PP
+Contact collection focuses on public contact-oriented pages and filters noisy
+email candidates such as noreply-style addresses, malformed strings, asset-like
+values, and off-domain results.
+.SH COMBINED INVESTIGATIONS
+When usernames and a domain are supplied in the same run, LowHunt performs a
+combined investigation workflow:
+.IP
+1. passive host intelligence is collected
+.br
+2. public contact emails are harvested and filtered
+.br
+3. username scans are executed
+.br
+4. correlation compares usernames against harvested identifiers
+.br
+5. an investigation confidence score and narrative are produced
+.br
+6. report bundles are stored
 .SH EXAMPLES
 .TP
 .B lowhunt alice \-\-engine fusion \-vv
@@ -114,6 +195,9 @@ Harvest fused passive host intelligence and save it as JSON.
 .TP
 .B lowhunt alice bob \-d example.com \-b all \-\-intel
 Run a combined investigation with profile scanning, passive harvest, and correlation.
+.TP
+.B lowhunt alice \-\-preset beginner
+Run a readable beginner-friendly username investigation.
 .TP
 .B lowhunt \-\-about
 Show the project overview and repository details.
@@ -141,5 +225,46 @@ Each scan or harvest stores an offline report bundle under:
 .PP
 Bundles include CLI, TXT, and JSON artifacts. Combined investigations also
 write a fused investigation summary with correlation confidence and narrative text.
+.SH FILES
+.TP
+.B platforms/*.json
+Username platform manifests.
+.TP
+.B ~/.lowhunt/output/reports/
+Stored report bundles.
+.TP
+.B install/
+Managed local installer scripts.
+.TP
+.B docs/
+Project documentation.
+.SH OUTPUTS
+Direct outputs support:
+.IP
+\[bu] txt
+.br
+\[bu] json
+.br
+\[bu] csv
+.PP
+Stored bundles are useful for later review, handoff, and case documentation.
+.SH SAFETY
+LowHunt is intentionally scoped for public-data-only OSINT. It is not a tool
+for bypassing authentication, defeating access controls, or performing
+unauthorized active intrusion.
+.PP
+Operators remain responsible for legal scope, authorization, and interpretation
+of findings.
+.SH AUTHOR
+voltsparx
+.SH CONTACT
+voltsparx@gmail.com
+.SH REPOSITORY
+https://github.com/voltsparx/LowHunt
+.SH LICENSE
+MIT
+.SH BUGS
+Public-data findings may be incomplete, stale, shared, or misleading. Treat
+results as investigative signals that require analyst judgment.
 .SH SEE ALSO
 .BR crt.sh (1)
